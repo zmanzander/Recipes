@@ -3,23 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Collection</title>
+    <title>Week 2 Meal Plan - Feb 23-27, 2026</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
             color: #333;
         }
         h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #34495e; margin-top: 30px; border-bottom: 1px solid #ecf0f1; padding-bottom: 5px; }
         .intro {
             background: #ecf0f1;
             padding: 15px;
             border-radius: 5px;
             margin: 20px 0;
         }
+        .nav {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .nav a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .nav a:hover { text-decoration: underline; }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .schedule-table th, .schedule-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        .schedule-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+        .schedule-table tr:hover { background: #f8f9fa; }
+        .meal-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .meal-link:hover { text-decoration: underline; }
+        .note {
+            background: #fef9e7;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #f39c12;
+        }
+        .prep-box {
+            background: #e8f6f3;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .prep-box h3 { margin-top: 0; color: #16a085; }
         .recipe-list {
             list-style: none;
             padding: 0;
@@ -31,69 +82,123 @@
             border-radius: 5px;
             border-left: 4px solid #3498db;
         }
-        .recipe-list a {
-            color: #2c3e50;
-            text-decoration: none;
-            font-size: 1.2em;
-            font-weight: 600;
-        }
-        .recipe-list a:hover {
-            color: #3498db;
-        }
         .meta {
             color: #7f8c8d;
             font-size: 0.9em;
             margin-top: 5px;
         }
-        .instructions {
-            background: #e8f6f3;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-right: 5px;
         }
-        .instructions h3 { margin-top: 0; color: #16a085; }
+        .tag-prep { background: #d5f4e6; color: #27ae60; }
+        .tag-fresh { background: #fdebd0; color: #e67e22; }
+        .tag-leftover { background: #d6eaf8; color: #2980b9; }
     </style>
 </head>
 <body>
-    <h1>🍽️ Recipe Collection</h1>
+    <h1>🍽️ Week 2 Meal Plan</h1>
+    <p style="color: #7f8c8d; margin-top: -10px;">February 23-27, 2026</p>
     
-    <div class="intro">
-        <p>Gluten-free, dairy-free recipes with dual portion sizes for Alexander (6'1", 2200 cal, 200g protein) and Wife (5'7", 1900 cal, 130g protein).</p>
-        <p><strong>To import to AnyList:</strong> Open any recipe page in Safari and click the AnyList extension button.</p>
+    <div class="nav">
+        <a href="index.html">📅 Current Week</a>
+        <a href="catalog.html">📚 Recipe Catalog</a>
+        <a href="weeks/week1.html">← Week 1</a>
     </div>
 
-    <h2>Week 1 Recipes</h2>
+    <div class="intro">
+        <p><strong>Targets:</strong> Alexander 2200 cal / 200g protein | Hanna 1900 cal / 130g protein</p>
+        <p><strong>This week:</strong> Gluten-free, reduced onion, more vegetables, Hanna's pickled beets featured Monday!</p>
+    </div>
+
+    <div class="note">
+        <strong>Schedule Note:</strong> Wednesday both out — prep Tuesday dinner for Wednesday. Friday: Zander no lunch, dinner out.
+    </div>
+
+    <h2>📅 Weekly Schedule</h2>
+    <table class="schedule-table">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Dinner</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Sunday</strong></td>
+                <td><a href="baked-cod.html" class="meal-link">Baked Cod with Lemon Caper Sauce</a></td>
+                <td><span class="tag tag-fresh">Fresh Cook</span> + Meal Prep after</td>
+            </tr>
+            <tr>
+                <td><strong>Monday</strong></td>
+                <td><a href="pork-tenderloin-beets.html" class="meal-link">Pork Tenderloin with Pickled Beets</a></td>
+                <td><span class="tag tag-fresh">Fresh</span> Features Hanna's beets</td>
+            </tr>
+            <tr>
+                <td><strong>Tuesday</strong></td>
+                <td><a href="thai-coconut-curry.html" class="meal-link">Thai Coconut Curry</a></td>
+                <td><span class="tag tag-prep">Double Batch</span> For Wed too</td>
+            </tr>
+            <tr>
+                <td><strong>Wednesday</strong></td>
+                <td><a href="thai-coconut-curry.html" class="meal-link">Thai Coconut Curry</a></td>
+                <td><span class="tag tag-leftover">Prepped Tue</span> Reheat & eat</td>
+            </tr>
+            <tr>
+                <td><strong>Thursday</strong></td>
+                <td><a href="beef-fajita-bowls.html" class="meal-link">Beef Fajita Bowls</a></td>
+                <td><span class="tag tag-fresh">Fresh Cook</span></td>
+            </tr>
+            <tr>
+                <td><strong>Friday</strong></td>
+                <td colspan="2" style="text-align: center; color: #7f8c8d;">🍽️ Dinner Out</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>📝 Sunday Meal Prep</h2>
+    <div class="prep-box">
+        <h3>Mediterranean Chicken Bowls (4 lunches each)</h3>
+        <p><strong>Makes:</strong> Zander Mon, Tue, Thu, Fri lunches | Hanna Mon-Thu lunches</p>
+        <ul>
+            <li>24 oz chicken breast (Zander) + 20 oz chicken breast (Hanna)</li>
+            <li>4 cups roasted vegetables (zucchini, bell peppers, asparagus)</li>
+            <li>4 cups dry jasmine rice</li>
+        </ul>
+        <p><a href="mediterranean-chicken-bowls.html" style="color: #16a085; font-weight: 600;">View full prep guide →</a></p>
+    </div>
+
+    <h2>🥗 This Week's Recipes</h2>
     <ul class="recipe-list">
         <li>
-            <a href="lemon-herb-chicken.html">Lemon Herb Chicken Thighs with Roasted Vegetables</a>
-            <div class="meta">Mediterranean • Sheet Pan • 50 min • Meal Prep Friendly</div>
+            <a href="baked-cod.html" class="meal-link">Baked Cod with Lemon Caper Sauce & Roasted Broccoli</a>
+            <div class="meta">🐟 Seafood • 25 min • Fresh Sunday night</div>
         </li>
         <li>
-            <a href="turkey-sweet-potato-hash.html">Turkey & Sweet Potato Hash</a>
-            <div class="meta">American • One Pot • 45 min • Meal Prep Friendly</div>
+            <a href="pork-tenderloin-beets.html" class="meal-link">Pork Tenderloin with Pickled Beets & Goat Cheese</a>
+            <div class="meta">🐷 Pork • 35 min • Features Hanna's pickled beets!</div>
         </li>
         <li>
-            <a href="garlic-butter-shrimp.html">Garlic Butter Shrimp with Rice</a>
-            <div class="meta">Mediterranean • Quick • 25 min • Meal Prep (3 days max)</div>
+            <a href="thai-coconut-curry.html" class="meal-link">Thai Coconut Curry</a>
+            <div class="meta">🥥 Asian • 30 min • Pork or chicken • Double batch</div>
         </li>
         <li>
-            <a href="beef-stir-fry.html">Beef Stir-Fry with Broccoli</a>
-            <div class="meta">Asian • Quick • 30 min • Best Fresh</div>
+            <a href="beef-fajita-bowls.html" class="meal-link">Beef Fajita Bowls</a>
+            <div class="meta">🌮 Mexican • 25 min • Fresh Thursday</div>
+        </li>
+        <li>
+            <a href="mediterranean-chicken-bowls.html" class="meal-link">Mediterranean Chicken Bowls (Meal Prep)</a>
+            <div class="meta">🍗 Chicken • 90 min • 8 lunches total</div>
         </li>
     </ul>
 
-    <div class="instructions">
-        <h3>How to Use</h3>
-        <ol>
-            <li><strong>Sunday Meal Prep:</strong> Make Lemon Herb Chicken, Turkey Hash, and Shrimp</li>
-            <li><strong>Monday-Thursday:</strong> Eat prepped meals (portioned for each person)</li>
-            <li><strong>Friday:</strong> Cook Beef Stir-Fry fresh</li>
-            <li><strong>Saturday:</strong> Flexible (fresh salmon or eat out)</li>
-        </ol>
-    </div>
-
-    <p style="margin-top: 30px; color: #7f8c8d; font-size: 0.9em;">
-        Last updated: February 15, 2026
+    <p style="margin-top: 40px; color: #7f8c8d; font-size: 0.9em; text-align: center;">
+        <a href="catalog.html">📚 View All Recipes</a> • 
+        <a href="weeks/week1.html">← Previous Week</a>
     </p>
 </body>
 </html>
