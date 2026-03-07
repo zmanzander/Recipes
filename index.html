@@ -3,37 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <title>Meal Plan: March 9-15, 2026</title>
-    <style>body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; } table { width: 100%; border-collapse: collapse; } th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }</style>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 20px; color: #333; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        th, td { border: 1px solid #eee; padding: 12px 15px; text-align: left; }
+        th { background-color: #f8f9fa; font-weight: 600; color: #555; text-transform: uppercase; font-size: 0.85em; letter-spacing: 0.05em; }
+        tr:nth-child(even) { background-color: #fafafa; }
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-right: 4px; }
+        .zander { background: #e3f2fd; color: #1976d2; }
+        .hanna { background: #fce4ec; color: #c2185b; }
+        .prep { color: #666; font-style: italic; font-size: 0.9em; }
+        h1, h2 { color: #222; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .recipe-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; }
+        .recipe-list li { background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 15px; transition: transform 0.2s; }
+        .recipe-list li:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .recipe-list a { text-decoration: none; color: #1976d2; font-weight: 600; }
+    </style>
 </head>
 <body>
-    <h1>Meal Plan: March 9-15, 2026</h1>
-    <p>This week follows the <strong>Nightly Fresh Cook</strong> workflow: Cook dinner fresh, portion out the remaining for the next day's lunch.</p>
+    <h1>Week 4 Meal Plan: March 9-15, 2026</h1>
+    <p><strong>Workflow:</strong> Nightly Fresh Cook + Sunday Batch Prep (Lunches/Breakfast).</p>
 
-    <h2>Nightly Cook Schedule</h2>
+    <h2>📅 Daily Schedule</h2>
     <table>
-        <tr><th>Day</th><th>Dinner Cook</th><th>Next Day Lunch</th></tr>
-        <tr><td>Sunday</td><td>Herb-Roasted Chicken (Z+H)</td><td>Prepped Sunday (Z+H Mon, Z Tue)</td></tr>
-        <tr><td>Monday</td><td>Salmon with Bok Choy (Z only)</td><td>Prepped Sunday (Z only)</td></tr>
-        <tr><td>Tuesday</td><td>Turkey Squash Boats (Z+H)</td><td>Wednesday Lunch (Z+H)</td></tr>
-        <tr><td>Wednesday</td><td>Pork Chops with Mushrooms (Z+H)</td><td>Thursday Lunch (H only)</td></tr>
-        <tr><td>Thursday</td><td>Shrimp Stir-Fry (Z+H)</td><td>Thursday Leftover (H only)</td></tr>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Lunch (Eat)</th>
+                <th>Dinner (Cook & Eat)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Sunday</strong></td>
+                <td>-</td>
+                <td>
+                    <strong>Herb-Roasted Whole Chicken</strong><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Monday</strong></td>
+                <td>
+                    <strong>Chicken Breast & Veggies</strong><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span><br>
+                    <span class="prep">(Prepped Sunday)</span>
+                </td>
+                <td>
+                    <strong>Pan-Seared Salmon</strong><br>
+                    <span class="badge zander">Zander</span>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Tuesday</strong></td>
+                <td>
+                    <strong>Chicken Breast & Veggies</strong><br>
+                    <span class="badge zander">Zander</span><br>
+                    <span class="prep">(Prepped Sunday)</span>
+                </td>
+                <td>
+                    <strong>Turkey Spaghetti Squash Boats</strong><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Wednesday</strong></td>
+                <td>
+                    <strong>Turkey Squash Boats</strong> (Leftover)<br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
+                <td>
+                    <strong>Pork Chops & Oyster Mushrooms</strong><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Thursday</strong></td>
+                <td>
+                    <strong>Pork Chops & Mushrooms</strong> (Leftover)<br>
+                    <span class="badge hanna">Hanna</span><br>
+                    <span class="prep">(Zander No Lunch)</span>
+                </td>
+                <td>
+                    <strong>Shrimp Stir-Fry</strong><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Friday</strong></td>
+                <td>
+                    <strong>Turkey Squash Boats</strong> (Leftover)<br>
+                    <span class="badge hanna">Hanna</span><br>
+                    <span class="prep">(Zander No Lunch)</span>
+                </td>
+                <td>-</td>
+            </tr>
+        </tbody>
     </table>
 
-    <h2>Recipes</h2>
-    <ul>
-        <li><a href="breakfast-hash.html">Potato, Parsnip & Turkey Breakfast Hash</a> (Prep Sunday, eats Mon-Fri)</li>
-        <li><a href="herb-roasted-chicken.html">Herb-Roasted Chicken & Vegetables</a> (Sunday Cook)</li>
-        <li><a href="pan-seared-salmon.html">Pan-Seared Salmon with Bok Choy</a> (Monday Cook)</li>
-        <li><a href="turkey-squash-boats.html">Turkey & Spaghetti Squash Boats</a> (Tuesday Cook)</li>
-        <li><a href="pork-chops-mushrooms.html">Pork Chops with Oyster Mushrooms</a> (Wednesday Cook)</li>
-        <li><a href="shrimp-stir-fry.html">Shrimp Stir-Fry with Vegetables</a> (Thursday Cook)</li>
+    <h2>🍳 Recipes & Prep Guides</h2>
+    <ul class="recipe-list">
+        <li><a href="breakfast-hash.html">Morning Hash (Mon-Fri)</a><br><small>Turkey, Potato, Parsnip, Carrot</small></li>
+        <li><a href="herb-roasted-chicken.html">Sunday: Whole Roast Chicken</a><br><small>Lemon, Rosemary, Thyme</small></li>
+        <li><a href="pan-seared-salmon.html">Monday: Pan-Seared Salmon</a><br><small>Bok Choy & Dill</small></li>
+        <li><a href="turkey-squash-boats.html">Tuesday: Turkey Squash Boats</a><br><small>Spaghetti Squash & Spinach</small></li>
+        <li><a href="pork-chops-mushrooms.html">Wednesday: Pork Chops</a><br><small>Oyster Mushrooms & Potato</small></li>
+        <li><a href="shrimp-stir-fry.html">Thursday: Shrimp Stir-Fry</a><br><small>Bok Choy & Ginger</small></li>
     </ul>
 
-    <h2>Workflow Notes</h2>
+    <h2>⚠️ Important Rules</h2>
     <ul>
-        <li>**Sunday Prep:** Buy ingredients. Cook Breakfast Hash (10 portions). **Prep Monday & Tuesday Lunches:** Use 1.5 lbs of Chicken Breast + extra veggies for Zander (Mon/Tue) and Hanna (Mon). Roast the Whole Chicken for Sunday Dinner only.</li>
-        <li>**Fish/Shrimp Rule:** NO leftover fish/shrimp for lunch. Those meals are cooked single-serving or scaled for dinner only.</li>
-        <li>**Hanna Schedule:** No dinner Monday; No lunch Tuesday.</li>
+        <li><strong>Leftover Rule:</strong> Never eat leftover fish/shrimp for lunch.</li>
+        <li><strong>Friday Rule:</strong> Zander no lunch. No shared dinner.</li>
+        <li><strong>Medical Strict:</strong> GF/DF/SF/EF/Low-FODMAP. Yellow Peppers Only. No Sweet Potato.</li>
     </ul>
 </body>
 </html>
