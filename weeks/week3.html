@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Meal Plan - March 1-7, 2026</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #34495e; margin-top: 30px; border-bottom: 1px solid #ecf0f1; padding-bottom: 5px; }
+        .intro {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .nav {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .nav a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .nav a:hover { text-decoration: underline; }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .schedule-table th, .schedule-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        .schedule-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+        .schedule-table tr:hover { background: #f8f9fa; }
+        .meal-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .meal-link:hover { text-decoration: underline; }
+        .note {
+            background: #fef9e7;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #f39c12;
+        }
+        .prep-box {
+            background: #e8f6f3;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .prep-box h3 { margin-top: 0; color: #16a085; }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+        .tag-prep { background: #d5f4e6; color: #27ae60; }
+        .tag-fresh { background: #fdebd0; color: #e67e22; }
+        .tag-guest { background: #fadbd8; color: #e74c3c; }
+    </style>
+</head>
+<body>
+    <h1>🍽️ Week 3 Meal Plan</h1>
+    <p style="color: #7f8c8d; margin-top: -10px;">March 1-7, 2026</p>
+    
+    <div class="nav">
+        <a href="index.html">📅 Current Week</a>
+        <a href="catalog.html">📚 Recipe Catalog</a>
+        <a href="weeks/week2.html">← Week 2</a>
+    </div>
+
+    <div class="intro">
+        <p><strong>Targets:</strong> Alexander 2200 cal / 200g protein | Hanna 1900 cal / 130g protein</p>
+        <p><strong>Freshness Protocols:</strong> Seafood (Salmon) on Monday. Beef Fajita lunches limited to 4-day prep.</p>
+        <p><strong>🎉 Special:</strong> Wednesday is guest dinner (3 people) - Hanna's friend joining!</p>
+    </div>
+
+    <div class="note">
+        <strong>Strategic Note:</strong> Sunday Prep covers 14 breakfasts and 8 lunches. Friday lunch is fresh chicken salad. All dinners (except Friday) are fresh cooks.
+    </div>
+
+    <h2>📅 Weekly Schedule</h2>
+    <table class="schedule-table">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Breakfast (Prep)</th>
+                <th>Lunch (Prep)</th>
+                <th>Dinner (Fresh)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Sunday</strong></td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="steak-sweet-potato-asparagus.html" class="meal-link">Pan-Seared Steak</a> <span class="tag tag-fresh">Fresh</span></td>
+            </tr>
+            <tr>
+                <td><strong>Monday</strong></td>
+                <td><a href="breakfast-hash.html" class="meal-link">Power Hash</a> <span class="tag tag-prep">Prep</span></td>
+                <td><a href="beef-fajita-bowls.html" class="meal-link">Beef Fajita Bowl</a> <span class="tag tag-prep">Prep</span></td>
+                <td><a href="honey-garlic-salmon.html" class="meal-link">Honey Garlic Salmon</a> <span class="tag tag-fresh">Fresh Fish</span></td>
+            </tr>
+            <tr>
+                <td><strong>Tuesday</strong></td>
+                <td><a href="breakfast-hash.html" class="meal-link">Power Hash</a> <span class="tag tag-prep">Prep</span></td>
+                <td><a href="beef-fajita-bowls.html" class="meal-link">Beef Fajita Bowl</a> <span class="tag tag-prep">Prep</span></td>
+                <td><a href="honey-garlic-chicken.html" class="meal-link">Honey Garlic Chicken</a> <span class="tag tag-fresh">Fresh</span></td>
+            </tr>
+            <tr>
+                <td><strong>Wednesday</strong></td>
+                <td><a href="breakfast-hash.html" class="meal-link">Power Hash</a> <span class="tag tag-prep">Prep</span></td>
+                <td><a href="beef-fajita-bowls.html" class="meal-link">Beef Fajita Bowl</a> <span class="tag tag-prep">Prep</span></td>
+                <td><a href="pork-chimichurri.html" class="meal-link">Pork Tenderloin w/ Chimichurri</a> <span class="tag tag-guest">Guest Dinner (3)</span></td>
+            </tr>
+            <tr>
+                <td><strong>Thursday</strong></td>
+                <td><a href="breakfast-hash.html" class="meal-link">Power Hash</a> <span class="tag tag-prep">Prep</span></td>
+                <td><a href="beef-fajita-bowls.html" class="meal-link">Beef Fajita Bowl</a> <span class="tag tag-prep">Prep</span></td>
+                <td><a href="chicken-thighs-piccata.html" class="meal-link">Crispy Chicken Thighs Piccata</a> <span class="tag tag-fresh">Fresh</span></td>
+            </tr>
+            <tr>
+                <td><strong>Friday</strong></td>
+                <td><a href="breakfast-hash.html" class="meal-link">Power Hash</a> <span class="tag tag-prep">Prep</span></td>
+                <td><span class="tag tag-fresh">Fresh Cook</span> Chicken Salad</td>
+                <td style="color: #7f8c8d;">🍽️ Dinner Out</td>
+            </tr>
+            <tr>
+                <td><strong>Saturday</strong></td>
+                <td colspan="3" style="text-align: center; color: #7f8c8d; font-style: italic;">Free Day - Handle Independently</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="prep-box">
+        <h3>📝 Sunday Prep: Breakfasts & Lunches</h3>
+        <p><strong>1. Egg-Free Savory "Power" Hash (14 portions)</strong></p>
+        <ul>
+            <li>9 lbs Ground Turkey / Chicken Sausage (5 lbs Sun prep + 4 lbs Wed prep)</li>
+            <li>6-9 large Yukon Gold Potatoes + Peppers + Spring Onions</li>
+        </ul>
+        <p><strong>2. Beef Fajita Bowls (8 lunches)</strong></p>
+        <ul>
+            <li>4.75 lbs Steak total (4 lbs Sun prep Mon-Wed + 0.75 lb Wed fresh Thu)</li>
+            <li>3.25 cups Jasmine Rice (Dry) + Roasted peppers & spring onions</li>
+        </ul>
+        <p><a href="breakfast-hash.html" style="color: #16a085; font-weight: 600;">Breakfast Guide</a> &bull; <a href="beef-fajita-bowls.html" style="color: #16a085; font-weight: 600;">Lunch Guide</a></p>
+    </div>
+
+    <p style="margin-top: 40px; color: #7f8c8d; font-size: 0.9em; text-align: center;">
+        <a href="catalog.html">📚 View All Recipes</a> • 
+        <a href="weeks/week2.html">← Previous Week</a>
+    </p>
+</body>
+</html>
