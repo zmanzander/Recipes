@@ -15,12 +15,6 @@
         }
         h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
         h2 { color: #34495e; margin-top: 30px; border-bottom: 1px solid #ecf0f1; padding-bottom: 5px; }
-        .intro {
-            background: #ecf0f1;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
         .nav {
             background: #f8f9fa;
             padding: 15px;
@@ -30,33 +24,14 @@
             gap: 20px;
             flex-wrap: wrap;
         }
-        .nav a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 600;
-        }
+        .nav a { color: #3498db; text-decoration: none; font-weight: 600; }
         .nav a:hover { text-decoration: underline; }
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
+        .intro {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
             margin: 20px 0;
         }
-        .schedule-table th, .schedule-table td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ecf0f1;
-        }
-        .schedule-table th {
-            background: #f8f9fa;
-            font-weight: 600;
-        }
-        .schedule-table tr:hover { background: #f8f9fa; }
-        .meal-link {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .meal-link:hover { text-decoration: underline; }
         .note {
             background: #fef9e7;
             padding: 10px 15px;
@@ -64,6 +39,50 @@
             margin: 10px 0;
             border-left: 4px solid #f39c12;
         }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .schedule-table th, .schedule-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        .schedule-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #555;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.05em;
+        }
+        .schedule-table tr:hover { background: #f8f9fa; }
+        .meal-link { color: #3498db; text-decoration: none; font-weight: 600; }
+        .meal-link:hover { text-decoration: underline; }
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-right: 4px;
+        }
+        .zander { background: #e3f2fd; color: #1976d2; }
+        .hanna { background: #fce4ec; color: #c2185b; }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+        .tag-prep { background: #d5f4e6; color: #27ae60; }
+        .tag-fresh { background: #fdebd0; color: #e67e22; }
+        .tag-leftover { background: #d6eaf8; color: #2980b9; }
+        .tag-guest { background: #fadbd8; color: #e74c3c; }
         .prep-box {
             background: #e8f6f3;
             padding: 20px;
@@ -82,32 +101,18 @@
             border-radius: 5px;
             border-left: 4px solid #3498db;
         }
-        .meta {
-            color: #7f8c8d;
-            font-size: 0.9em;
-            margin-top: 5px;
-        }
-        .tag {
-            display: inline-block;
-            padding: 2px 8px;
-            border-radius: 3px;
-            font-size: 0.8em;
-            margin-right: 5px;
-        }
-        .tag-prep { background: #d5f4e6; color: #27ae60; }
-        .tag-fresh { background: #fdebd0; color: #e67e22; }
-        .tag-leftover { background: #d6eaf8; color: #2980b9; }
+        .meta { color: #7f8c8d; font-size: 0.9em; margin-top: 5px; }
     </style>
 </head>
 <body>
-    <h1>🍽️ Week 2 Meal Plan</h1>
+    <h1>Week 2 Meal Plan</h1>
     <p style="color: #7f8c8d; margin-top: -10px;">February 23-27, 2026</p>
-    
+
     <div class="nav">
-        <a href="../index.html">📅 Current Week</a>
-        <a href="../catalog.html">📚 Recipe Catalog</a>
-        <a href="week1.html">← Week 1</a>
-        <a href="week3.html">Week 3 →</a>
+        <a href="../index.html">Current Week</a>
+        <a href="../catalog.html">Recipe Catalog</a>
+        <a href="week1.html">&larr; Week 1</a>
+        <a href="week3.html">Week 3 &rarr;</a>
     </div>
 
     <div class="intro">
@@ -119,49 +124,97 @@
         <strong>Schedule Note:</strong> Wednesday both out — prep Tuesday dinner for Wednesday. Friday: Zander no lunch, dinner out.
     </div>
 
-    <h2>📅 Weekly Schedule</h2>
+    <h2>Daily Schedule</h2>
     <table class="schedule-table">
         <thead>
             <tr>
                 <th>Day</th>
+                <th>Breakfast</th>
+                <th>Lunch</th>
                 <th>Dinner</th>
-                <th>Notes</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td><strong>Sunday</strong></td>
-                <td><a href="../baked-cod.html" class="meal-link">Baked Cod with Lemon Caper Sauce</a></td>
-                <td><span class="tag tag-fresh">Fresh Cook</span> + Meal Prep after</td>
+                <td>-</td>
+                <td>-</td>
+                <td>
+                    <a href="../baked-cod.html" class="meal-link">Baked Cod with Lemon Caper Sauce</a>
+                    <span class="tag tag-fresh">Fresh</span><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
             </tr>
             <tr>
                 <td><strong>Monday</strong></td>
-                <td><a href="../pork-tenderloin-beets.html" class="meal-link">Pork Tenderloin with Pickled Beets</a></td>
-                <td><span class="tag tag-fresh">Fresh</span> Features Hanna's beets</td>
+                <td>-</td>
+                <td>
+                    <a href="../mediterranean-chicken-bowls.html" class="meal-link">Med Chicken Bowl</a>
+                    <span class="tag tag-prep">Prep</span><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
+                <td>
+                    <a href="../pork-tenderloin-beets.html" class="meal-link">Pork Tenderloin with Pickled Beets</a>
+                    <span class="tag tag-fresh">Fresh</span><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
             </tr>
             <tr>
                 <td><strong>Tuesday</strong></td>
-                <td><a href="../harvest-chicken-salad-tacos.html" class="meal-link">Harvest Chicken Salad Tacos</a></td>
-                <td><span class="tag tag-fresh">Fresh Cook</span> Subbed in!</td>
+                <td>-</td>
+                <td>
+                    <a href="../mediterranean-chicken-bowls.html" class="meal-link">Med Chicken Bowl</a>
+                    <span class="tag tag-prep">Prep</span><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
+                <td>
+                    <a href="../harvest-chicken-salad-tacos.html" class="meal-link">Harvest Chicken Salad Tacos</a>
+                    <span class="tag tag-fresh">Fresh</span><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
             </tr>
             <tr>
                 <td><strong>Wednesday</strong></td>
-                <td><a href="../thai-coconut-curry.html" class="meal-link">Thai Coconut Curry</a></td>
-                <td><span class="tag tag-fresh">Fresh Cook</span> Moved from Tue</td>
+                <td>-</td>
+                <td>
+                    <a href="../mediterranean-chicken-bowls.html" class="meal-link">Med Chicken Bowl</a>
+                    <span class="tag tag-prep">Prep</span><br>
+                    <span class="badge hanna">Hanna</span>
+                </td>
+                <td>
+                    <a href="../thai-coconut-curry.html" class="meal-link">Thai Coconut Curry</a>
+                    <span class="tag tag-fresh">Fresh</span><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
             </tr>
             <tr>
                 <td><strong>Thursday</strong></td>
-                <td><a href="../harvest-chicken-salad-tacos.html" class="meal-link">Harvest Chicken Salad Tacos</a></td>
-                <td><span class="tag tag-leftover">Prepped Tue</span> Leftovers</td>
+                <td>-</td>
+                <td>
+                    <a href="../mediterranean-chicken-bowls.html" class="meal-link">Med Chicken Bowl</a>
+                    <span class="tag tag-prep">Prep</span><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
+                <td>
+                    <a href="../harvest-chicken-salad-tacos.html" class="meal-link">Harvest Chicken Salad Tacos</a>
+                    <span class="tag tag-leftover">Leftover</span><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
             </tr>
             <tr>
                 <td><strong>Friday</strong></td>
-                <td colspan="2" style="text-align: center; color: #7f8c8d;">🍽️ Dinner Out</td>
+                <td>-</td>
+                <td>
+                    <a href="../mediterranean-chicken-bowls.html" class="meal-link">Med Chicken Bowl</a>
+                    <span class="tag tag-prep">Prep</span><br>
+                    <span class="badge zander">Zander</span>
+                </td>
+                <td style="text-align: center; color: #7f8c8d;">Dinner Out</td>
             </tr>
         </tbody>
     </table>
 
-    <h2>📝 Sunday Meal Prep</h2>
+    <h2>Sunday Meal Prep</h2>
     <div class="prep-box">
         <h3>Mediterranean Chicken Bowls (4 lunches each)</h3>
         <p><strong>Makes:</strong> Zander Mon, Tue, Thu, Fri lunches | Hanna Mon-Thu lunches</p>
@@ -170,37 +223,37 @@
             <li>4 cups roasted vegetables (zucchini, bell peppers, asparagus)</li>
             <li>4 cups dry jasmine rice</li>
         </ul>
-        <p><a href="../mediterranean-chicken-bowls.html" style="color: #16a085; font-weight: 600;">View full prep guide →</a></p>
+        <p><a href="../mediterranean-chicken-bowls.html" style="color: #16a085; font-weight: 600;">View full prep guide &rarr;</a></p>
     </div>
 
-    <h2>🥗 This Week's Recipes</h2>
+    <h2>Recipes</h2>
     <ul class="recipe-list">
         <li>
             <a href="../harvest-chicken-salad-tacos.html" class="meal-link">Harvest Chicken Salad Tacos (GF/DF)</a>
-            <div class="meta">🌮 Chicken • 35 min • Cook chicken fresh tonight</div>
+            <div class="meta">Chicken · 35 min · Cook chicken fresh tonight</div>
         </li>
         <li>
-            <a href="../baked-cod.html" class="meal-link">Baked Cod with Lemon Caper Sauce & Roasted Broccoli</a>
-            <div class="meta">🐟 Seafood • 25 min • Fresh Sunday night</div>
+            <a href="../baked-cod.html" class="meal-link">Baked Cod with Lemon Caper Sauce &amp; Roasted Broccoli</a>
+            <div class="meta">Seafood · 25 min · Fresh Sunday night</div>
         </li>
         <li>
-            <a href="../pork-tenderloin-beets.html" class="meal-link">Pork Tenderloin with Pickled Beets & Goat Cheese</a>
-            <div class="meta">🐷 Pork • 35 min • Features Hanna's pickled beets!</div>
+            <a href="../pork-tenderloin-beets.html" class="meal-link">Pork Tenderloin with Pickled Beets &amp; Goat Cheese</a>
+            <div class="meta">Pork · 35 min · Features Hanna's pickled beets!</div>
         </li>
         <li>
             <a href="../thai-coconut-curry.html" class="meal-link">Thai Coconut Curry</a>
-            <div class="meta">🥥 Asian • 30 min • Pork or chicken • Wed/Thu Dinner</div>
+            <div class="meta">Asian · 30 min · Pork or chicken · Wed/Thu Dinner</div>
         </li>
         <li>
             <a href="../mediterranean-chicken-bowls.html" class="meal-link">Mediterranean Chicken Bowls (Meal Prep)</a>
-            <div class="meta">🍗 Chicken • 90 min • 8 lunches total</div>
+            <div class="meta">Chicken · 90 min · 8 lunches total</div>
         </li>
     </ul>
 
     <p style="margin-top: 40px; color: #7f8c8d; font-size: 0.9em; text-align: center;">
-        <a href="../catalog.html">📚 View All Recipes</a> •
-        <a href="week1.html">← Week 1</a> •
-        <a href="week3.html">Week 3 →</a>
+        <a href="week1.html">&larr; Week 1</a> &middot;
+        <a href="../catalog.html">All Recipes</a> &middot;
+        <a href="week3.html">Week 3 &rarr;</a>
     </p>
 </body>
 </html>
