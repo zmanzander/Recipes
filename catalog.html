@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
@@ -15,6 +15,7 @@
         }
         h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
         h2 { color: #34495e; margin-top: 30px; border-bottom: 1px solid #ecf0f1; padding-bottom: 5px; }
+
         .nav {
             background: #f8f9fa;
             padding: 15px;
@@ -30,59 +31,134 @@
             font-weight: 600;
         }
         .nav a:hover { text-decoration: underline; }
-        .intro {
-            background: #ecf0f1;
-            padding: 15px;
-            border-radius: 5px;
+
+        /* Search & Filter Controls */
+        .search-bar {
             margin: 20px 0;
         }
-        .category-grid {
+        .search-bar input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #dce1e6;
+            border-radius: 8px;
+            font-size: 1em;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .search-bar input:focus {
+            border-color: #3498db;
+        }
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+        .filter-btn {
+            padding: 6px 16px;
+            border: 2px solid #dce1e6;
+            border-radius: 20px;
+            background: white;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .filter-btn:hover {
+            border-color: #3498db;
+            color: #3498db;
+        }
+        .filter-btn.active {
+            background: #3498db;
+            border-color: #3498db;
+            color: white;
+        }
+        .result-count {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin: 10px 0;
+        }
+
+        /* Recipe Cards */
+        .recipe-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
+            gap: 16px;
             margin: 20px 0;
         }
-        .category-card {
+        .recipe-card {
             background: #f8f9fa;
             border-radius: 8px;
-            padding: 20px;
+            padding: 18px;
             border-left: 4px solid #3498db;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .category-card h3 {
-            margin-top: 0;
+        .recipe-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .recipe-card.hidden { display: none; }
+        .recipe-card a {
             color: #2c3e50;
-        }
-        .recipe-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .recipe-list li {
-            margin: 10px 0;
-            padding: 8px 0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .recipe-list li:last-child { border-bottom: none; }
-        .recipe-list a {
-            color: #3498db;
             text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05em;
         }
-        .recipe-list a:hover { text-decoration: underline; }
-        .meta {
+        .recipe-card a:hover { color: #3498db; }
+        .recipe-meta {
             color: #7f8c8d;
             font-size: 0.85em;
-            margin-top: 3px;
+            margin-top: 6px;
         }
+        .protein-tag {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 600;
+            margin-right: 4px;
+        }
+        .protein-chicken { background: #fdebd0; color: #e67e22; }
+        .protein-beef { background: #fadbd8; color: #c0392b; }
+        .protein-turkey { background: #d5f4e6; color: #27ae60; }
+        .protein-pork { background: #f5d0e0; color: #8e44ad; }
+        .protein-seafood { background: #d6eaf8; color: #2980b9; }
+        .protein-breakfast { background: #f9e79f; color: #7d6608; }
+
         .rating {
             display: inline-block;
             padding: 2px 8px;
             border-radius: 3px;
             font-size: 0.75em;
-            margin-left: 5px;
+            margin-left: 4px;
         }
         .rating-loved { background: #d5f4e6; color: #27ae60; }
         .rating-good { background: #d6eaf8; color: #2980b9; }
         .rating-skip { background: #fadbd8; color: #e74c3c; }
+
+        .week-tags {
+            margin-top: 6px;
+        }
+        .week-tag {
+            display: inline-block;
+            padding: 1px 8px;
+            border-radius: 3px;
+            font-size: 0.7em;
+            background: #eee;
+            color: #555;
+            margin-right: 3px;
+        }
+
+        /* Border colors by protein */
+        .recipe-card[data-protein="chicken"] { border-left-color: #e67e22; }
+        .recipe-card[data-protein="beef"] { border-left-color: #c0392b; }
+        .recipe-card[data-protein="turkey"] { border-left-color: #27ae60; }
+        .recipe-card[data-protein="pork"] { border-left-color: #8e44ad; }
+        .recipe-card[data-protein="seafood"] { border-left-color: #2980b9; }
+        .recipe-card[data-protein="breakfast"] { border-left-color: #d4ac0d; }
+
+        /* Weekly Archives */
         .weeks-section {
             background: #fef9e7;
             padding: 20px;
@@ -107,146 +183,327 @@
             font-weight: 600;
         }
         .week-card a:hover { color: #3498db; }
+        .week-card .meta {
+            color: #7f8c8d;
+            font-size: 0.85em;
+            margin-top: 4px;
+        }
+        .week-card.current {
+            border: 2px solid #3498db;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+            display: none;
+        }
     </style>
 </head>
 <body>
-    <h1>📚 Recipe Catalog</h1>
-    
+    <h1>Recipe Catalog</h1>
+
     <div class="nav">
-        <a href="index.html">📅 Current Week</a>
-        <a href="catalog.html">📚 Recipe Catalog</a>
+        <a href="index.html">Current Week</a>
+        <a href="catalog.html">Recipe Catalog</a>
     </div>
 
-    <div class="intro">
-        <p>Complete collection of all recipes organized by protein. Click any recipe to view full instructions.</p>
-        <p><span class="rating rating-loved">⭐ Loved</span> <span class="rating rating-good">⭐ Good</span> <span class="rating rating-skip">⭐ Skip</span></p>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search recipes by name, protein, ingredient...">
     </div>
 
-    <h2>🌅 Breakfast</h2>
-    <div class="category-grid">
-        <div class="category-card">
-            <h3>🍳 Breakfast Hash</h3>
-            <ul class="recipe-list">
-                <li>
-                    <a href="breakfast-hash.html">Turkey & Sweet Potato Breakfast Hash</a>
-                    <span class="rating rating-loved">⭐ Loved</span>
-                    <div class="meta">One pan • 45 min • Less onion, more veggies</div>
-                </li>
-            </ul>
-        </div>
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="chicken">Chicken</button>
+        <button class="filter-btn" data-filter="beef">Beef</button>
+        <button class="filter-btn" data-filter="turkey">Turkey</button>
+        <button class="filter-btn" data-filter="pork">Pork</button>
+        <button class="filter-btn" data-filter="seafood">Seafood</button>
     </div>
 
-    <h2>🍗 Chicken</h2>
-    <div class="category-grid">
-        <div class="category-card">
-            <h3>🍯 Honey Garlic Chicken</h3>
-            <ul class="recipe-list">
-                <li>
-                    <a href="honey-garlic-chicken.html">Honey Garlic Chicken with Jasmine Rice</a>
-                    <div class="meta">Skillet • 40 min • Week 3 Prep</div>
-                </li>
-            </ul>
+    <div class="result-count" id="resultCount"></div>
+
+    <div class="recipe-grid" id="recipeGrid">
+
+        <!-- CHICKEN -->
+        <div class="recipe-card" data-protein="chicken" data-weeks="1" data-search="lemon herb chicken thighs roasted vegetables mediterranean sheet pan chicken">
+            <a href="lemon-herb-chicken.html">Lemon Herb Chicken with Roasted Vegetables</a>
+            <span class="rating rating-loved">Loved</span>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-chicken">Chicken</span> Sheet Pan &bull; 50 min
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 1</span></div>
         </div>
-        <div class="category-card">
-            <h3>🌮 Harvest Chicken Salad</h3>
-            <ul class="recipe-list">
-                <li>
-                    <a href="harvest-chicken-salad-tacos.html">Harvest Chicken Salad Tacos (GF/DF)</a>
-                    <div class="meta">Skillet + Fresh • 35 min • Week 2</div>
-                </li>
-            </ul>
+
+        <div class="recipe-card" data-protein="chicken" data-weeks="2" data-search="harvest chicken salad tacos gluten free dairy free chicken">
+            <a href="harvest-chicken-salad-tacos.html">Harvest Chicken Salad Tacos (GF/DF)</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-chicken">Chicken</span> Skillet + Fresh &bull; 35 min
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 2</span></div>
         </div>
-        <div class="category-card">
-            <h3>🍋 Lemon Herb Chicken</h3>
-            <ul class="recipe-list">
-                <li>
-                    <a href="lemon-herb-chicken.html">Lemon Herb Chicken with Roasted Vegetables</a>
-                    <span class="rating rating-loved">⭐ Loved</span>
-                    <div class="meta">Sheet pan • 50 min • Meal prep</div>
-                </li>
-            </ul>
+
+        <div class="recipe-card" data-protein="chicken" data-weeks="2" data-search="mediterranean chicken bowls meal prep chicken rice vegetables">
+            <a href="mediterranean-chicken-bowls.html">Mediterranean Chicken Bowls</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-chicken">Chicken</span> Meal Prep &bull; 90 min &bull; 8 lunches
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 2</span></div>
         </div>
+
+        <div class="recipe-card" data-protein="chicken" data-weeks="3" data-search="honey garlic chicken jasmine rice skillet chicken">
+            <a href="honey-garlic-chicken.html">Honey Garlic Chicken with Jasmine Rice</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-chicken">Chicken</span> Skillet &bull; 40 min
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 3</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="chicken" data-weeks="3" data-search="crispy chicken thighs piccata lemon capers chicken">
+            <a href="chicken-thighs-piccata.html">Crispy Chicken Thighs Piccata</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-chicken">Chicken</span> Skillet &bull; Fresh Cook
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 3</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="chicken" data-weeks="4" data-search="herb roasted whole chicken lemon rosemary thyme chicken">
+            <a href="herb-roasted-chicken.html">Herb-Roasted Whole Chicken</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-chicken">Chicken</span> Roasted &bull; Sunday Dinner
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 4</span></div>
+        </div>
+
+        <!-- BEEF -->
+        <div class="recipe-card" data-protein="beef" data-weeks="1" data-search="beef stir fry broccoli asian quick beef">
+            <a href="beef-stir-fry.html">Beef Stir-Fry with Broccoli</a>
+            <span class="rating rating-good">Good</span>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-beef">Beef</span> Quick &bull; 30 min &bull; Best Fresh
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 1</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="beef" data-weeks="3" data-search="beef fajita bowls rice peppers steak beef">
+            <a href="beef-fajita-bowls.html">Beef Fajita Bowls</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-beef">Beef</span> Meal Prep &bull; 8 lunches
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 3</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="beef" data-weeks="3" data-search="pan seared steak sweet potato asparagus beef steak">
+            <a href="steak-sweet-potato-asparagus.html">Pan-Seared Steak with Roasted Vegetables</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-beef">Beef</span> Fresh &bull; 30 min
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 3</span></div>
+        </div>
+
+        <!-- TURKEY -->
+        <div class="recipe-card" data-protein="turkey" data-weeks="1" data-search="turkey sweet potato hash one pot turkey">
+            <a href="turkey-sweet-potato-hash.html">Turkey & Sweet Potato Hash</a>
+            <span class="rating rating-loved">Loved</span>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-turkey">Turkey</span> One Pot &bull; 45 min &bull; Meal Prep
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 1</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="turkey" data-weeks="3" data-search="ground turkey taco bowls turkey tacos">
+            <a href="ground-turkey-taco-bowls.html">Ground Turkey Taco Bowls</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-turkey">Turkey</span> Balanced &bull; 30 min
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 3</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="turkey" data-weeks="4" data-search="turkey spaghetti squash boats spinach turkey">
+            <a href="turkey-squash-boats.html">Turkey Spaghetti Squash Boats</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-turkey">Turkey</span> Baked &bull; Spinach & Squash
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 4</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="turkey" data-weeks="" data-search="turkey burgers turkey patties grilled">
+            <a href="turkey-burgers.html">Turkey Burgers</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-turkey">Turkey</span> Grilled &bull; Quick
+            </div>
+            <div class="week-tags"><span class="week-tag">Not yet scheduled</span></div>
+        </div>
+
+        <!-- PORK -->
+        <div class="recipe-card" data-protein="pork" data-weeks="2" data-search="pork tenderloin pickled beets pork">
+            <a href="pork-tenderloin-beets.html">Pork Tenderloin with Pickled Beets</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-pork">Pork</span> Fresh &bull; 35 min
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 2</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="pork" data-weeks="3" data-search="pork tenderloin chimichurri herb sauce pork">
+            <a href="pork-chimichurri.html">Pork Tenderloin with Chimichurri</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-pork">Pork</span> Fresh &bull; Guest Dinner
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 3</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="pork" data-weeks="4" data-search="pork chops oyster mushrooms potato pork">
+            <a href="pork-chops-mushrooms.html">Pork Chops with Oyster Mushrooms</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-pork">Pork</span> Skillet &bull; Potato
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 4</span></div>
+        </div>
+
+        <!-- SEAFOOD -->
+        <div class="recipe-card" data-protein="seafood" data-weeks="1" data-search="garlic butter shrimp rice shrimp seafood">
+            <a href="garlic-butter-shrimp.html">Garlic Butter Shrimp with Rice</a>
+            <span class="rating rating-skip">Skip</span>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-seafood">Seafood</span> Shrimp &bull; 25 min
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 1</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="seafood" data-weeks="2" data-search="baked cod lemon caper sauce broccoli cod seafood fish">
+            <a href="baked-cod.html">Baked Cod with Lemon Caper Sauce</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-seafood">Seafood</span> Cod &bull; 25 min &bull; Fresh Only
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 2</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="seafood" data-weeks="3" data-search="honey garlic salmon salmon seafood fish">
+            <a href="honey-garlic-salmon.html">Honey Garlic Salmon</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-seafood">Seafood</span> Salmon &bull; Fresh Only
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 3</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="seafood" data-weeks="4" data-search="pan seared salmon bok choy dill salmon seafood fish">
+            <a href="pan-seared-salmon.html">Pan-Seared Salmon with Bok Choy</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-seafood">Seafood</span> Salmon &bull; Fresh Only
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 4</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="seafood" data-weeks="4" data-search="shrimp stir fry bok choy ginger shrimp seafood">
+            <a href="shrimp-stir-fry.html">Shrimp Stir-Fry with Bok Choy</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-seafood">Seafood</span> Shrimp &bull; Ginger
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 4</span></div>
+        </div>
+
+        <!-- BREAKFAST (cross-protein, turkey-based) -->
+        <div class="recipe-card" data-protein="breakfast" data-weeks="3,4" data-search="breakfast hash turkey potato parsnip carrot power hash breakfast turkey">
+            <a href="breakfast-hash.html">Turkey & Veggie Breakfast Hash</a>
+            <span class="rating rating-loved">Loved</span>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-breakfast">Breakfast</span> Turkey-based &bull; 45 min &bull; Meal Prep
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 3</span> <span class="week-tag">Week 4</span></div>
+        </div>
+
+        <!-- OTHER -->
+        <div class="recipe-card" data-protein="pork" data-weeks="2" data-search="thai coconut curry pork chicken asian curry">
+            <a href="thai-coconut-curry.html">Thai Coconut Curry</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-pork">Pork</span> Asian &bull; 30 min &bull; Pork or Chicken
+            </div>
+            <div class="week-tags"><span class="week-tag">Week 2</span></div>
+        </div>
+
     </div>
 
-    <h2>🥩 Beef</h2>
-    <div class="category-grid">
-        <div class="category-card">
-            <h3>🥩 Pan-Seared Steak</h3>
-            <ul class="recipe-list">
-                <li>
-                    <a href="steak-sweet-potato-asparagus.html">Pan-Seared Steak with Roasted Sweet Potato</a>
-                    <div class="meta">Fresh • 30 min • Week 3</div>
-                </li>
-            </ul>
-        </div>
-        <div class="category-card">
-            <h3>🥦 Beef Stir-Fry</h3>
-            <ul class="recipe-list">
-                <li>
-                    <a href="beef-stir-fry.html">Beef Stir-Fry with Broccoli</a>
-                    <div class="meta">Quick • 30 min • Best fresh</div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <h2>🦃 Turkey</h2>
-    <div class="category-grid">
-        <div class="category-card">
-            <h3>🌮 Ground Turkey Taco Bowls</h3>
-            <ul class="recipe-list">
-                <li>
-                    <a href="ground-turkey-taco-bowls.html">Ground Turkey Taco Bowls</a>
-                    <div class="meta">Balanced • 30 min • Week 3 Prep</div>
-                </li>
-            </ul>
-        </div>
-        <div class="category-card">
-            <h3>🍠 Turkey Hash</h3>
-            <ul class="recipe-list">
-                <li>
-                    <a href="turkey-sweet-potato-hash.html">Turkey & Sweet Potato Hash</a>
-                    <span class="rating rating-loved">⭐ Loved</span>
-                    <div class="meta">One pot • 45 min • Meal prep</div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <h2>🐟 Seafood</h2>
-    <div class="category-grid">
-        <div class="category-card">
-            <h3>🐟 Baked Cod</h3>
-            <ul class="recipe-list">
-                <li>
-                    <a href="baked-cod.html">Baked Cod with Lemon Caper Sauce</a>
-                    <div class="meta">Fresh • 25 min • Week 2</div>
-                </li>
-            </ul>
-        </div>
+    <div class="no-results" id="noResults">
+        No recipes match your search. Try a different protein or keyword.
     </div>
 
     <div class="weeks-section">
-        <h2>📅 Weekly Archives</h2>
-        <p>Browse meals by week to find favorites or track what you've cooked.</p>
+        <h2>Weekly Archives</h2>
+        <p>Browse past meal plans to see what was cooked each week.</p>
         <div class="weeks-grid">
             <div class="week-card">
                 <a href="weeks/week1.html">Week 1</a>
                 <div class="meta">Feb 16-22, 2026</div>
+                <div class="meta">4 recipes</div>
             </div>
             <div class="week-card">
                 <a href="weeks/week2.html">Week 2</a>
                 <div class="meta">Feb 23-27, 2026</div>
+                <div class="meta">5 recipes</div>
             </div>
             <div class="week-card">
-                <a href="index.html">Week 3 (Current)</a>
-                <div class="meta">March 2-8, 2026</div>
+                <a href="weeks/week3.html">Week 3</a>
+                <div class="meta">March 1-7, 2026</div>
+                <div class="meta">7 recipes</div>
+            </div>
+            <div class="week-card current">
+                <a href="index.html">Week 4 (Current)</a>
+                <div class="meta">March 9-15, 2026</div>
+                <div class="meta">6 recipes</div>
             </div>
         </div>
     </div>
 
     <p style="margin-top: 40px; color: #7f8c8d; font-size: 0.9em; text-align: center;">
-        <a href="index.html">← Back to Current Week</a>
+        <a href="index.html">&larr; Back to Current Week</a>
     </p>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const recipeCards = document.querySelectorAll('.recipe-card');
+        const resultCount = document.getElementById('resultCount');
+        const noResults = document.getElementById('noResults');
+
+        let activeFilter = 'all';
+
+        function updateDisplay() {
+            const query = searchInput.value.toLowerCase().trim();
+            let visible = 0;
+
+            recipeCards.forEach(card => {
+                const protein = card.dataset.protein;
+                const searchText = card.dataset.search;
+                const name = card.querySelector('a').textContent.toLowerCase();
+
+                const matchesFilter = activeFilter === 'all' || protein === activeFilter;
+                const matchesSearch = !query || name.includes(query) || searchText.includes(query);
+
+                if (matchesFilter && matchesSearch) {
+                    card.classList.remove('hidden');
+                    visible++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            resultCount.textContent = visible + ' recipe' + (visible !== 1 ? 's' : '') + ' found';
+            noResults.style.display = visible === 0 ? 'block' : 'none';
+        }
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                activeFilter = btn.dataset.filter;
+                updateDisplay();
+            });
+        });
+
+        searchInput.addEventListener('input', updateDisplay);
+
+        // Initial count
+        updateDisplay();
+    </script>
 </body>
 </html>
