@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates - Meal Plan Changelog</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #34495e; margin-top: 30px; border-bottom: 1px solid #ecf0f1; padding-bottom: 5px; }
+        .nav {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .nav a { color: #3498db; text-decoration: none; font-weight: 600; }
+        .nav a:hover { text-decoration: underline; }
+        .update-entry {
+            background: #f8f9fa;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 16px 0;
+            border-left: 4px solid #3498db;
+        }
+        .update-entry.new-week { border-left-color: #27ae60; }
+        .update-entry.site-change { border-left-color: #8e44ad; }
+        .update-entry.recipe-change { border-left-color: #e67e22; }
+        .update-date {
+            color: #7f8c8d;
+            font-size: 0.85em;
+            margin-bottom: 4px;
+        }
+        .update-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.05em;
+        }
+        .update-details {
+            margin-top: 6px;
+            font-size: 0.9em;
+        }
+        .update-details ul {
+            margin: 4px 0 0 0;
+            padding-left: 20px;
+        }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.75em;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        .tag-week { background: #d5f4e6; color: #27ae60; }
+        .tag-site { background: #e8d5f4; color: #8e44ad; }
+        .tag-recipe { background: #fdebd0; color: #e67e22; }
+    </style>
+</head>
+<body>
+    <h1>Updates</h1>
+    <p style="color: #7f8c8d; margin-top: -10px;">Changelog for meal plans, recipes, and site changes</p>
+
+    <div class="nav">
+        <a href="index.html">Current Week</a>
+        <a href="catalog.html">Recipe Catalog</a>
+        <a href="weeks/index.html">Weekly Archives</a>
+        <a href="updates.html">Updates</a>
+    </div>
+
+    <h2>March 2026</h2>
+
+    <div class="update-entry site-change">
+        <div class="update-date">March 9, 2026</div>
+        <div class="update-title"><span class="tag tag-site">Site</span> Standardized all week pages</div>
+        <div class="update-details">
+            <ul>
+                <li>Unified CSS, layout, and nav across all 4 week pages</li>
+                <li>4-column schedule table (Day/Breakfast/Lunch/Dinner) on every page</li>
+                <li>Added person badges (Zander/Hanna) to all meal entries</li>
+                <li>Consistent tag system (prep/fresh/leftover/guest) replaces old ratings</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="update-entry site-change">
+        <div class="update-date">March 9, 2026</div>
+        <div class="update-title"><span class="tag tag-site">Site</span> Added Weekly Archives page and Updates page</div>
+        <div class="update-details">
+            <ul>
+                <li>New Weekly Archives hub with card grid for browsing past weeks</li>
+                <li>New Updates page (this page) for tracking changes</li>
+                <li>"Weekly Archives" and "Updates" links added to nav on all pages</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="update-entry new-week">
+        <div class="update-date">March 9, 2026</div>
+        <div class="update-title"><span class="tag tag-week">New Week</span> Week 4 Meal Plan posted</div>
+        <div class="update-details">
+            <ul>
+                <li>6 recipes: Herb-Roasted Chicken, Pan-Seared Salmon, Turkey Squash Boats, Pork Chops &amp; Mushrooms, Shrimp Stir-Fry, Morning Hash</li>
+                <li>Workflow: Nightly fresh cook + Sunday batch prep</li>
+                <li>Medical strict: GF/DF/SF/EF/Low-FODMAP</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="update-entry new-week">
+        <div class="update-date">March 1, 2026</div>
+        <div class="update-title"><span class="tag tag-week">New Week</span> Week 3 Meal Plan posted</div>
+        <div class="update-details">
+            <ul>
+                <li>Full breakfast/lunch/dinner planning introduced</li>
+                <li>Power Hash breakfasts (14 portions) and Beef Fajita Bowl lunches (8 portions)</li>
+                <li>Wednesday guest dinner: Pork Chimichurri for 3</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>February 2026</h2>
+
+    <div class="update-entry new-week">
+        <div class="update-date">February 23, 2026</div>
+        <div class="update-title"><span class="tag tag-week">New Week</span> Week 2 Meal Plan posted</div>
+        <div class="update-details">
+            <ul>
+                <li>Nutritional targets introduced (Zander 2200 cal / Hanna 1900 cal)</li>
+                <li>Mediterranean Chicken Bowls meal prep begins</li>
+                <li>Featured Hanna's pickled beets with Pork Tenderloin</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="update-entry new-week">
+        <div class="update-date">February 16, 2026</div>
+        <div class="update-title"><span class="tag tag-week">New Week</span> Week 1 Meal Plan posted</div>
+        <div class="update-details">
+            <ul>
+                <li>First week of meal planning — 4 dinner recipes</li>
+                <li>All gluten-free, dairy-free with dual portion sizes</li>
+                <li>Feedback: Lemon Herb Chicken and Turkey Hash were hits</li>
+            </ul>
+        </div>
+    </div>
+
+    <p style="margin-top: 40px; color: #7f8c8d; font-size: 0.9em; text-align: center;">
+        <a href="index.html">&larr; Current Week</a> &middot;
+        <a href="catalog.html">Recipe Catalog</a>
+    </p>
+</body>
+</html>

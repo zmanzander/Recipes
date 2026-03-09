@@ -24,11 +24,7 @@
             gap: 20px;
             flex-wrap: wrap;
         }
-        .nav a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 600;
-        }
+        .nav a { color: #3498db; text-decoration: none; font-weight: 600; }
         .nav a:hover { text-decoration: underline; }
         .intro {
             background: #ecf0f1;
@@ -45,27 +41,64 @@
             font-size: 0.85em;
             margin-left: 10px;
         }
+        .note {
+            background: #fef9e7;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #f39c12;
+        }
         .schedule-table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         .schedule-table th, .schedule-table td {
-            padding: 12px;
+            padding: 12px 15px;
             text-align: left;
             border-bottom: 1px solid #ecf0f1;
         }
         .schedule-table th {
             background: #f8f9fa;
             font-weight: 600;
+            color: #555;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.05em;
         }
         .schedule-table tr:hover { background: #f8f9fa; }
-        .meal-link {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 600;
-        }
+        .meal-link { color: #3498db; text-decoration: none; font-weight: 600; }
         .meal-link:hover { text-decoration: underline; }
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-right: 4px;
+        }
+        .zander { background: #e3f2fd; color: #1976d2; }
+        .hanna { background: #fce4ec; color: #c2185b; }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+        .tag-prep { background: #d5f4e6; color: #27ae60; }
+        .tag-fresh { background: #fdebd0; color: #e67e22; }
+        .tag-leftover { background: #d6eaf8; color: #2980b9; }
+        .tag-guest { background: #fadbd8; color: #e74c3c; }
+        .prep-box {
+            background: #e8f6f3;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .prep-box h3 { margin-top: 0; color: #16a085; }
         .recipe-list {
             list-style: none;
             padding: 0;
@@ -77,129 +110,131 @@
             border-radius: 5px;
             border-left: 4px solid #3498db;
         }
-        .meta {
-            color: #7f8c8d;
-            font-size: 0.9em;
-            margin-top: 5px;
-        }
-        .rating {
-            display: inline-block;
-            padding: 2px 8px;
-            border-radius: 3px;
-            font-size: 0.8em;
-            margin-left: 5px;
-        }
-        .rating-loved { background: #d5f4e6; color: #27ae60; }
-        .rating-good { background: #d6eaf8; color: #2980b9; }
-        .rating-skip { background: #fadbd8; color: #e74c3c; }
-        .notes-box {
-            background: #fef9e7;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-            border-left: 4px solid #f39c12;
-        }
-        .notes-box h3 { margin-top: 0; color: #d68910; }
+        .meta { color: #7f8c8d; font-size: 0.9em; margin-top: 5px; }
     </style>
 </head>
 <body>
-    <h1>🍽️ Week 1 Meal Plan <span class="archive-badge">ARCHIVE</span></h1>
+    <h1>Week 1 Meal Plan <span class="archive-badge">ARCHIVE</span></h1>
     <p style="color: #7f8c8d; margin-top: -10px;">February 16-22, 2026</p>
-    
+
     <div class="nav">
-        <a href="../index.html">📅 Current Week (Week 2)</a>
-        <a href="../catalog.html">📚 Recipe Catalog</a>
+        <a href="../index.html">Current Week</a>
+        <a href="../catalog.html">Recipe Catalog</a>
+        <a href="index.html">Weekly Archives</a>
+        <a href="../updates.html">Updates</a>
+        <a href="week2.html">Week 2 &rarr;</a>
     </div>
 
     <div class="intro">
         <p>First week of meal planning. All gluten-free, dairy-free with dual portion sizes.</p>
     </div>
 
-    <div class="notes-box">
-        <h3>📝 Week 1 Feedback Summary</h3>
-        <ul>
-            <li><strong>Lemon Herb Chicken:</strong> ⭐ Loved! Used breast instead of thighs — very good seasoning.</li>
-            <li><strong>Turkey Sweet Potato Hash:</strong> ⭐ Loved! Japanese sweet potato was delicious. Needs more veggies, less onion.</li>
-            <li><strong>Steak Bites:</strong> ⭐ Good! Has potential, worth repeating.</li>
-            <li><strong>Garlic Butter Shrimp:</strong> ⭐ Skip. Lacking flavor, gritty texture.</li>
+    <div class="note">
+        <strong>Week 1 Feedback Summary:</strong>
+        <ul style="margin-bottom: 0;">
+            <li><strong>Lemon Herb Chicken:</strong> Loved! Used breast instead of thighs — very good seasoning.</li>
+            <li><strong>Turkey Sweet Potato Hash:</strong> Loved! Japanese sweet potato was delicious. Needs more veggies, less onion.</li>
+            <li><strong>Steak Bites:</strong> Good! Has potential, worth repeating.</li>
+            <li><strong>Garlic Butter Shrimp:</strong> Skip. Lacking flavor, gritty texture.</li>
         </ul>
         <p><strong>Adjustments for future:</strong> Reduce onion in all recipes, add more vegetables.</p>
     </div>
 
-    <h2>📅 Weekly Schedule</h2>
+    <h2>Daily Schedule</h2>
     <table class="schedule-table">
         <thead>
             <tr>
                 <th>Day</th>
+                <th>Breakfast</th>
+                <th>Lunch</th>
                 <th>Dinner</th>
-                <th>Notes</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td><strong>Sunday</strong></td>
-                <td>Meal Prep Day</td>
-                <td>Prep 3 recipes for the week</td>
+                <td>-</td>
+                <td>-</td>
+                <td><span class="tag tag-prep">Meal Prep Day</span> Prep 3 recipes for the week</td>
             </tr>
             <tr>
                 <td><strong>Monday</strong></td>
-                <td><a href="../lemon-herb-chicken.html" class="meal-link">Lemon Herb Chicken</a> <span class="rating rating-loved">⭐ Loved</span></td>
-                <td>Prepped Sunday</td>
+                <td>-</td>
+                <td>-</td>
+                <td>
+                    <a href="../recipes/lemon-herb-chicken.html" class="meal-link">Lemon Herb Chicken</a>
+                    <span class="tag tag-prep">Prep</span><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
             </tr>
             <tr>
                 <td><strong>Tuesday</strong></td>
-                <td><a href="../turkey-sweet-potato-hash.html" class="meal-link">Turkey & Sweet Potato Hash</a> <span class="rating rating-loved">⭐ Loved</span></td>
-                <td>Prepped Sunday</td>
+                <td>-</td>
+                <td>-</td>
+                <td>
+                    <a href="../recipes/turkey-sweet-potato-hash.html" class="meal-link">Turkey &amp; Sweet Potato Hash</a>
+                    <span class="tag tag-prep">Prep</span><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
             </tr>
             <tr>
                 <td><strong>Wednesday</strong></td>
-                <td><a href="../beef-stir-fry.html" class="meal-link">Beef Stir-Fry</a> <span class="rating rating-good">⭐ Good</span></td>
-                <td>Fresh cook mid-week</td>
+                <td>-</td>
+                <td>-</td>
+                <td>
+                    <a href="../recipes/beef-stir-fry.html" class="meal-link">Beef Stir-Fry</a>
+                    <span class="tag tag-fresh">Fresh</span><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
             </tr>
             <tr>
                 <td><strong>Thursday</strong></td>
-                <td><a href="../garlic-butter-shrimp.html" class="meal-link">Garlic Butter Shrimp</a> <span class="rating rating-skip">⭐ Skip</span></td>
-                <td>Prepped Sunday — didn't love</td>
+                <td>-</td>
+                <td>-</td>
+                <td>
+                    <a href="../recipes/garlic-butter-shrimp.html" class="meal-link">Garlic Butter Shrimp</a>
+                    <span class="tag tag-prep">Prep</span><br>
+                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                </td>
             </tr>
             <tr>
                 <td><strong>Friday</strong></td>
-                <td colspan="2" style="text-align: center; color: #7f8c8d;">🍽️ Dinner Out</td>
+                <td>-</td>
+                <td>-</td>
+                <td style="text-align: center; color: #7f8c8d;">Dinner Out</td>
             </tr>
             <tr>
                 <td><strong>Saturday</strong></td>
-                <td>Flexible</td>
-                <td>Salmon or eat out</td>
+                <td>-</td>
+                <td>-</td>
+                <td style="color: #7f8c8d; font-style: italic;">Flexible — Salmon or eat out</td>
             </tr>
         </tbody>
     </table>
 
-    <h2>🥗 Week 1 Recipes</h2>
+    <h2>Recipes</h2>
     <ul class="recipe-list">
         <li>
-            <a href="../lemon-herb-chicken.html" class="meal-link">Lemon Herb Chicken Thighs with Roasted Vegetables</a>
-            <span class="rating rating-loved">⭐ Loved</span>
-            <div class="meta">🍗 Chicken • Mediterranean • Sheet Pan • 50 min • Meal Prep Friendly</div>
+            <a href="../recipes/lemon-herb-chicken.html" class="meal-link">Lemon Herb Chicken Thighs with Roasted Vegetables</a>
+            <div class="meta">Chicken · Mediterranean · Sheet Pan · 50 min · Meal Prep Friendly</div>
         </li>
         <li>
-            <a href="../turkey-sweet-potato-hash.html" class="meal-link">Turkey & Sweet Potato Hash</a>
-            <span class="rating rating-loved">⭐ Loved</span>
-            <div class="meta">🦃 Turkey • American • One Pot • 45 min • Meal Prep Friendly</div>
+            <a href="../recipes/turkey-sweet-potato-hash.html" class="meal-link">Turkey &amp; Sweet Potato Hash</a>
+            <div class="meta">Turkey · American · One Pot · 45 min · Meal Prep Friendly</div>
         </li>
         <li>
-            <a href="../beef-stir-fry.html" class="meal-link">Beef Stir-Fry with Broccoli</a>
-            <span class="rating rating-good">⭐ Good</span>
-            <div class="meta">🥩 Beef • Asian • Quick • 30 min • Best Fresh</div>
+            <a href="../recipes/beef-stir-fry.html" class="meal-link">Beef Stir-Fry with Broccoli</a>
+            <div class="meta">Beef · Asian · Quick · 30 min · Best Fresh</div>
         </li>
         <li>
-            <a href="../garlic-butter-shrimp.html" class="meal-link">Garlic Butter Shrimp with Rice</a>
-            <span class="rating rating-skip">⭐ Skip</span>
-            <div class="meta">🦐 Shrimp • Mediterranean • Quick • 25 min • 3 day max</div>
+            <a href="../recipes/garlic-butter-shrimp.html" class="meal-link">Garlic Butter Shrimp with Rice</a>
+            <div class="meta">Shrimp · Mediterranean · Quick · 25 min · 3 day max</div>
         </li>
     </ul>
 
     <p style="margin-top: 40px; color: #7f8c8d; font-size: 0.9em; text-align: center;">
-        <a href="../index.html">→ Week 2 (Current)</a> • 
-        <a href="../catalog.html">📚 All Recipes</a>
+        <a href="week2.html">Week 2 &rarr;</a> &middot;
+        <a href="../catalog.html">All Recipes</a>
     </p>
 </body>
 </html>
