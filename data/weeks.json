@@ -155,15 +155,15 @@
     },
     "schedule": {
       "sunday": {
-        "dinner": { "recipe": "salmon-green-beans", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
+        "dinner": { "recipe": "garlic-butter-shrimp", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
       },
       "monday": {
         "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
-        "dinner": { "recipe": "turkey-squash-boats", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
+        "dinner": { "recipe": "ground-turkey-taco-bowls", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
       },
       "tuesday": {
         "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
-        "dinner": { "recipe": "beef-stir-fry", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
+        "dinner": { "recipe": "beef-fajita-bowls", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
       },
       "wednesday": {
         "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
@@ -177,7 +177,7 @@
         "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["hanna"], "note": "Zander No Lunch" }
       }
     },
-    "recipes": ["breakfast-hash", "chicken-asparagus-prep", "salmon-green-beans", "turkey-squash-boats", "beef-stir-fry", "pork-tenderloin-chimichurri", "crispy-chicken-thighs"],
-    "highlights": ["Salmon & Green Beans (Hanna solo)", "Chicken & Asparagus lunch prep", "Pork Tenderloin Chimichurri", "Crispy Chicken Thighs"]
+    "recipes": ["breakfast-hash", "chicken-asparagus-prep", "garlic-butter-shrimp", "ground-turkey-taco-bowls", "beef-fajita-bowls", "pork-tenderloin-chimichurri", "crispy-chicken-thighs"],
+    "highlights": ["Garlic Butter Shrimp (Hanna solo)", "Ground Turkey Taco Bowls", "Beef Fajita Bowls", "Pork Tenderloin Chimichurri"]
   }
 ]
