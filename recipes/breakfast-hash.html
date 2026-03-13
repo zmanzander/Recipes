@@ -2,63 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Potato, Parsnip & Turkey Breakfast Hash</title>
+    <title>Yukon Gold Turkey & Parsnip Hash</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; color: #333; }
-        h1, h2 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 8px; }
-        .meta { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-weight: 600; }
-        .ingredients, .instructions, .portioning { margin-bottom: 30px; }
-        ul, ol { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        .badge { background: #e3f2fd; color: #1976d2; padding: 2px 8px; border-radius: 12px; font-size: 0.85em; font-weight: 600; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; color: #333; }
+        h1 { color: #222; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .meta { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; display: flex; gap: 20px; font-size: 0.9em; }
+        .ingredients { background: #fffaf0; padding: 20px; border-radius: 8px; border: 1px solid #ffe4b5; margin-bottom: 20px; }
+        .ingredients h2 { margin-top: 0; font-size: 1.2em; color: #8b4513; }
+        .ingredients ul { list-style: none; padding: 0; }
+        .ingredients li { margin-bottom: 5px; padding-left: 20px; position: relative; }
+        .ingredients li::before { content: "□"; position: absolute; left: 0; color: #ffa500; }
+        .steps { counter-reset: step-counter; }
+        .step { margin-bottom: 20px; padding-left: 40px; position: relative; }
+        .step::before { content: counter(step-counter); counter-increment: step-counter; position: absolute; left: 0; top: 0; width: 30px; height: 30px; background: #1976d2; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+        .quantity { font-weight: 700; color: #c2185b; }
+        .heat { font-weight: 700; color: #d32f2f; }
+        .portioning { background: #e3f2fd; padding: 20px; border-radius: 8px; border: 1px solid #bbdefb; }
     </style>
 </head>
 <body>
-    <h1>Potato, Parsnip & Turkey Breakfast Hash</h1>
-    <div class="meta">
-        ⏱️ Prep: 15 mins | 🍳 Cook: 30 mins | 📦 Makes: 10 Portions
-    </div>
+    <h1>🥔 Yukon Gold Turkey & Parsnip Hash</h1>
     
+    <div class="meta">
+        <div><strong>Time:</strong> 45 mins</div>
+        <div><strong>Storage:</strong> 5 days in fridge</div>
+        <div><strong>EF / No Sweet Potato</strong></div>
+    </div>
+
     <div class="ingredients">
-        <h2>Ingredients</h2>
+        <h2>Ingredients (Shared Batch: 10 portions)</h2>
         <ul>
-            <li><strong>Ground Turkey:</strong> 96.5 oz raw total (Zander 5x 12oz, Hanna 5x 7.3oz)</li>
-            <li><strong>Potatoes:</strong> 4 large Regular Potatoes (Yukon Gold or Russet), peeled and cut into 1/2-inch cubes</li>
-            <li><strong>Parsnips:</strong> 3 large Parsnips, peeled and cut into 1/2-inch cubes</li>
-            <li><strong>Carrots:</strong> 2 cups Shredded Carrots</li>
-            <li><strong>Yellow Bell Peppers:</strong> 3 Yellow Bell Peppers, cut into 1/4-inch dice</li>
-            <li><strong>Spinach:</strong> 4 cups Fresh Spinach</li>
-            <li><strong>Green Onions:</strong> 1 cup Green Onion tops (green part only), finely chopped</li>
-            <li><strong>Oil:</strong> 4 tbsp Garlic-infused Olive Oil (divided)</li>
-            <li><strong>Spices:</strong> 1 tbsp Turmeric, 1 tbsp Cumin, and Sea Salt to taste</li>
+            <li><span class="quantity">3 lbs</span> Ground Turkey (93% lean)</li>
+            <li><span class="quantity">2 lbs</span> Yukon Gold Potatoes (1/2-inch dice)</li>
+            <li><span class="quantity">1 lb</span> Parsnips (1/2-inch dice)</li>
+            <li><span class="quantity">3 medium</span> Carrots (1/4-inch dice)</li>
+            <li><span class="quantity">2 medium</span> Yellow Bell Peppers (diced)</li>
+            <li><span class="quantity">1 bunch</span> Green Onion Tops (sliced)</li>
+            <li><span class="quantity">4 tbsp</span> Garlic-infused Olive Oil</li>
+            <li><span class="quantity">1 tbsp</span> Smoked Paprika</li>
+            <li><span class="quantity">1 tsp</span> Cumin</li>
+            <li><span class="quantity">Salt & Pepper</span> to taste</li>
         </ul>
     </div>
 
-    <div class="instructions">
-        <h2>Instructions</h2>
-        <ol>
-            <li><strong>Sauté Roots:</strong> Heat 2 tbsp garlic-infused olive oil in a very large skillet or pot over <strong>medium-high heat</strong>. Add the 4 large cubed potatoes and 3 large cubed parsnips. Cook for 15-20 minutes, stirring occasionally, until the roots are softened and have developed a light golden-brown crust.</li>
-            <li><strong>Add Protein:</strong> To the same skillet, add the remaining 2 tbsp garlic-infused olive oil, 96.5 oz ground turkey, and 2 cups shredded carrots. Season with 1 tbsp turmeric, 1 tbsp cumin, and sea salt.</li>
-            <li><strong>Brown Turkey:</strong> Continue cooking over <strong>medium-high heat</strong> for 8-10 minutes. Use a spatula to break the ground turkey into small crumbles as it browns, until no pink remains.</li>
-            <li><strong>Add Peppers:</strong> Stir in the 3 diced yellow bell peppers and 1 cup chopped green onion tops. Cook over <strong>medium heat</strong> for 5 minutes, allowing the peppers to soften slightly while retaining their color.</li>
-            <li><strong>Wilt Spinach:</strong> Add 4 cups fresh spinach to the skillet. Gently fold the spinach into the hash for 1-2 minutes until just wilted.</li>
-            <li><strong>Portion:</strong> Remove from heat and allow to cool slightly before dividing into 10 airtight containers for the week.</li>
-        </ol>
+    <h2>Step-by-Step Instructions</h2>
+    <div class="steps">
+        <div class="step">
+            Bring a pot of salted water to a boil. Add the <span class="quantity">2 lbs diced potatoes</span> and <span class="quantity">1 lb diced parsnips</span>. Boil for 5-7 mins until par-cooked (fork-tender but not mushy). Drain and set aside.
+        </div>
+        <div class="step">
+            Heat <span class="quantity">2 tbsp garlic-infused oil</span> in a very large skillet or wok over <span class="heat">Medium-High Heat</span>.
+        </div>
+        <div class="step">
+            Add the <span class="quantity">3 lbs ground turkey</span>. Cook, breaking up with a spatula, until browned and cooked through.
+        </div>
+        <div class="step">
+            <strong>Instruction Update:</strong> Once browned, add the <span class="quantity">1 tbsp smoked paprika</span>, <span class="quantity">1 tsp cumin</span>, and salt/pepper. Stir well to coat the meat before it dries out. Remove turkey and set aside.
+        </div>
+        <div class="step">
+            Wipe skillet if needed, then add the remaining <span class="quantity">2 tbsp garlic oil</span>. Add the <span class="quantity">3 diced carrots</span> and the par-cooked potatoes/parsnips.
+        </div>
+        <div class="step">
+            Sauté over <span class="heat">Medium Heat</span> for 10-12 mins, flipping occasionally, until everything is golden and crispy.
+        </div>
+        <div class="step">
+            Add the <span class="quantity">2 diced yellow peppers</span> and <span class="quantity">sliced green onion tops</span>. Sauté for 3-5 mins until softened.
+        </div>
+        <div class="step">
+            Return the seasoned turkey to the pan. Toss everything together and heat through for 2 mins.
+        </div>
     </div>
 
     <div class="portioning">
-        <h2>Portioning (Cooked Volume)</h2>
-        <ul>
-            <li><span class="badge">Zander</span> <strong>5 Portions:</strong> Approx. 2.5 cups (or 9 oz cooked weight) per meal.</li>
-            <li><span class="badge">Hanna</span> <strong>5 Portions:</strong> Approx. 1.5 cups (or 5.5 oz cooked weight) per meal.</li>
-        </ul>
-    </div>
-
-    <div class="notes">
-        <h2>Medical Compliance</h2>
-        <p>✅ Gluten-free, Dairy-free, Egg-free, Soy-free. <br>
-           🚫 No garlic/onion pieces (infused oil and tops only). <br>
-           🚫 No sweet potatoes (using compliant white potatoes/parsnips).</p>
+        <h2>Portioning Guide (Cooked)</h2>
+        <p><strong>Alexander:</strong> <span class="quantity">approx. 12 oz volume (2 cups)</span> per morning.</p>
+        <p><strong>Hanna:</strong> <span class="quantity">approx. 8 oz volume (1.5 cups)</span> per morning.</p>
     </div>
 </body>
 </html>
