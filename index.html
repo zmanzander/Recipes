@@ -2,274 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 4 Meal Plan - March 9-15, 2026</title>
+    <title>Meal Plan: March 16-22, 2026</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            color: #333;
-        }
-        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        h2 { color: #34495e; margin-top: 30px; border-bottom: 1px solid #ecf0f1; padding-bottom: 5px; }
-        .nav {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .nav a { color: #3498db; text-decoration: none; font-weight: 600; }
-        .nav a:hover { text-decoration: underline; }
-        .intro {
-            background: #ecf0f1;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-        .note {
-            background: #fef9e7;
-            padding: 10px 15px;
-            border-radius: 5px;
-            margin: 10px 0;
-            border-left: 4px solid #f39c12;
-        }
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: #fff;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        .schedule-table th, .schedule-table td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #ecf0f1;
-        }
-        .schedule-table th {
-            background: #f8f9fa;
-            font-weight: 600;
-            color: #555;
-            text-transform: uppercase;
-            font-size: 0.85em;
-            letter-spacing: 0.05em;
-        }
-        .schedule-table tr:hover { background: #f8f9fa; }
-        .meal-link { color: #3498db; text-decoration: none; font-weight: 600; }
-        .meal-link:hover { text-decoration: underline; }
-        .badge {
-            display: inline-block;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.8em;
-            font-weight: 600;
-            margin-right: 4px;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 20px; color: #333; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        th, td { border: 1px solid #eee; padding: 12px 15px; text-align: left; }
+        th { background-color: #f8f9fa; font-weight: 600; color: #555; text-transform: uppercase; font-size: 0.85em; letter-spacing: 0.05em; }
+        tr:nth-child(even) { background-color: #fafafa; }
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; font-weight: 600; margin-right: 4px; }
         .zander { background: #e3f2fd; color: #1976d2; }
         .hanna { background: #fce4ec; color: #c2185b; }
-        .tag {
-            display: inline-block;
-            padding: 2px 8px;
-            border-radius: 3px;
-            font-size: 0.8em;
-            margin-right: 5px;
-        }
-        .tag-prep { background: #d5f4e6; color: #27ae60; }
-        .tag-fresh { background: #fdebd0; color: #e67e22; }
-        .tag-leftover { background: #d6eaf8; color: #2980b9; }
-        .tag-guest { background: #fadbd8; color: #e74c3c; }
-        .prep-box {
-            background: #e8f6f3;
-            padding: 20px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-        .prep-box h3 { margin-top: 0; color: #16a085; }
-        .recipe-list {
-            list-style: none;
-            padding: 0;
-        }
-        .recipe-list li {
-            margin: 15px 0;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 5px;
-            border-left: 4px solid #3498db;
-        }
-        .meta { color: #7f8c8d; font-size: 0.9em; margin-top: 5px; }
+        .prep { color: #666; font-style: italic; font-size: 0.9em; }
+        h1, h2 { color: #222; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .recipe-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; }
+        .recipe-list li { background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 15px; transition: transform 0.2s; }
+        .recipe-list li:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .recipe-list a { text-decoration: none; color: #1976d2; font-weight: 600; }
     </style>
 </head>
 <body>
-    <h1>Week 4 Meal Plan</h1>
-    <p style="color: #7f8c8d; margin-top: -10px;">March 9-15, 2026</p>
+    <h1>Week 5 Meal Plan: March 16-22, 2026</h1>
+    <p><strong>Note:</strong> Zander away in Nashville Sun-Wed afternoon. Shared meals resume Wednesday night.</p>
 
-    <div class="nav">
-        <a href="index.html">Current Week</a>
-        <a href="catalog.html">Recipe Catalog</a>
-        <a href="weeks/index.html">Weekly Archives</a>
-        <a href="updates.html">Updates</a>
-        <a href="weeks/week3.html">&larr; Week 3</a>
-    </div>
-
-    <div class="intro">
-        <p><strong>Workflow:</strong> Nightly Fresh Cook + Sunday Batch Prep (Lunches/Breakfast).</p>
-        <p><strong>Medical Strict:</strong> GF/DF/SF/EF/Low-FODMAP. Yellow Peppers Only. No Sweet Potato.</p>
-    </div>
-
-    <div class="note">
-        <strong>Important Rules:</strong>
-        <ul style="margin-bottom: 0;">
-            <li><strong>Leftover Rule:</strong> Never eat leftover fish/shrimp for lunch.</li>
-            <li><strong>Friday Rule:</strong> Zander no lunch. No shared dinner.</li>
-        </ul>
-    </div>
-
-    <h2>Daily Schedule</h2>
-    <table class="schedule-table">
+    <h2>📅 Daily Schedule</h2>
+    <table>
         <thead>
             <tr>
                 <th>Day</th>
-                <th>Breakfast</th>
-                <th>Lunch</th>
-                <th>Dinner</th>
+                <th>Lunch (Eat)</th>
+                <th>Dinner (Cook & Eat)</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td><strong>Sunday</strong></td>
                 <td>-</td>
-                <td>-</td>
                 <td>
-                    <a href="recipes/herb-roasted-chicken.html" class="meal-link">Herb-Roasted Whole Chicken</a>
-                    <span class="tag tag-fresh">Fresh</span><br>
-                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                    <strong>Pan-Seared Salmon</strong><br>
+                    <span class="badge hanna">Hanna Solo</span>
                 </td>
             </tr>
             <tr>
                 <td><strong>Monday</strong></td>
                 <td>
-                    <a href="recipes/breakfast-hash.html" class="meal-link">Morning Hash</a>
-                    <span class="tag tag-prep">Prep</span><br>
-                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                    <strong>Chicken & Asparagus</strong><br>
+                    <span class="badge hanna">Hanna Solo</span>
                 </td>
                 <td>
-                    Chicken Breast &amp; Veggies
-                    <span class="tag tag-prep">Prep</span><br>
-                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
-                </td>
-                <td>
-                    <a href="recipes/pan-seared-salmon.html" class="meal-link">Pan-Seared Salmon</a>
-                    <span class="tag tag-fresh">Fresh</span><br>
-                    <span class="badge zander">Zander</span>
+                    <strong>Turkey Squash Boats</strong><br>
+                    <span class="badge hanna">Hanna Solo</span>
                 </td>
             </tr>
             <tr>
                 <td><strong>Tuesday</strong></td>
                 <td>
-                    <a href="recipes/breakfast-hash.html" class="meal-link">Morning Hash</a>
-                    <span class="tag tag-prep">Prep</span><br>
-                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                    <strong>Chicken & Asparagus</strong><br>
+                    <span class="badge hanna">Hanna Solo</span>
                 </td>
                 <td>
-                    Chicken Breast &amp; Veggies
-                    <span class="tag tag-prep">Prep</span><br>
-                    <span class="badge zander">Zander</span>
-                </td>
-                <td>
-                    <a href="recipes/turkey-squash-boats.html" class="meal-link">Turkey Spaghetti Squash Boats</a>
-                    <span class="tag tag-fresh">Fresh</span><br>
-                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                    <strong>Beef & Yellow Pepper Stir-fry</strong><br>
+                    <span class="badge hanna">Hanna Solo</span>
                 </td>
             </tr>
             <tr>
                 <td><strong>Wednesday</strong></td>
                 <td>
-                    <a href="recipes/breakfast-hash.html" class="meal-link">Morning Hash</a>
-                    <span class="tag tag-prep">Prep</span><br>
-                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
+                    <strong>Chicken & Asparagus</strong><br>
+                    <span class="badge hanna">Hanna Solo</span>
                 </td>
                 <td>
-                    Turkey Squash Boats
-                    <span class="tag tag-leftover">Leftover</span><br>
-                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
-                </td>
-                <td>
-                    <a href="recipes/pork-chops-mushrooms.html" class="meal-link">Pork Chops &amp; Oyster Mushrooms</a>
-                    <span class="tag tag-fresh">Fresh</span><br>
+                    <strong>Pork Tenderloin w/ Chimichurri</strong><br>
                     <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
                 </td>
             </tr>
             <tr>
                 <td><strong>Thursday</strong></td>
                 <td>
-                    <a href="recipes/breakfast-hash.html" class="meal-link">Morning Hash</a>
-                    <span class="tag tag-prep">Prep</span><br>
+                    <strong>Chicken & Asparagus</strong> (Shared)<br>
                     <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
                 </td>
                 <td>
-                    Pork Chops &amp; Mushrooms
-                    <span class="tag tag-leftover">Leftover</span><br>
-                    <span class="badge hanna">Hanna</span>
-                </td>
-                <td>
-                    <a href="recipes/shrimp-stir-fry.html" class="meal-link">Shrimp Stir-Fry</a>
-                    <span class="tag tag-fresh">Fresh</span><br>
+                    <strong>Crispy Chicken Thighs</strong><br>
                     <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
                 </td>
             </tr>
             <tr>
                 <td><strong>Friday</strong></td>
                 <td>
-                    <a href="recipes/breakfast-hash.html" class="meal-link">Morning Hash</a>
-                    <span class="tag tag-prep">Prep</span><br>
-                    <span class="badge zander">Zander</span> <span class="badge hanna">Hanna</span>
-                </td>
-                <td>
-                    Turkey Squash Boats
-                    <span class="tag tag-leftover">Leftover</span><br>
-                    <span class="badge hanna">Hanna</span>
+                    <strong>Chicken & Asparagus</strong> (Shared)<br>
+                    <span class="badge hanna">Hanna</span><br>
+                    <span class="prep">(Zander No Lunch)</span>
                 </td>
                 <td>-</td>
             </tr>
         </tbody>
     </table>
 
-    <h2>Recipes</h2>
+    <h2>🍳 Recipes & Prep Guides</h2>
     <ul class="recipe-list">
-        <li>
-            <a href="recipes/breakfast-hash.html" class="meal-link">Morning Hash (Mon-Fri)</a>
-            <div class="meta">Turkey · Potato · Parsnip · Carrot</div>
-        </li>
-        <li>
-            <a href="recipes/herb-roasted-chicken.html" class="meal-link">Herb-Roasted Whole Chicken</a>
-            <div class="meta">Chicken · Lemon · Rosemary · Thyme · Sunday dinner</div>
-        </li>
-        <li>
-            <a href="recipes/pan-seared-salmon.html" class="meal-link">Pan-Seared Salmon</a>
-            <div class="meta">Seafood · Bok Choy · Dill · Monday dinner</div>
-        </li>
-        <li>
-            <a href="recipes/turkey-squash-boats.html" class="meal-link">Turkey Spaghetti Squash Boats</a>
-            <div class="meta">Turkey · Spaghetti Squash · Spinach · Tuesday dinner</div>
-        </li>
-        <li>
-            <a href="recipes/pork-chops-mushrooms.html" class="meal-link">Pork Chops &amp; Oyster Mushrooms</a>
-            <div class="meta">Pork · Mushrooms · Potato · Wednesday dinner</div>
-        </li>
-        <li>
-            <a href="recipes/shrimp-stir-fry.html" class="meal-link">Shrimp Stir-Fry</a>
-            <div class="meta">Shrimp · Bok Choy · Ginger · Thursday dinner</div>
-        </li>
+        <li><a href="html/breakfast-hash.html">Yukon Gold Turkey Hash</a><br><small>Hanna Solo Sun-Wed / Shared Thu-Sat</small></li>
+        <li><a href="html/chicken-asparagus-prep.html">Lunch Prep: Chicken & Asparagus</a><br><small>Lemon-Herb Oil & Rice</small></li>
+        <li><a href="html/salmon-green-beans.html">Sunday: Salmon & Green Beans</a><br><small>Hanna Solo Dinner</small></li>
+        <li><a href="html/pork-tenderloin-chimichurri.html">Wednesday: Pork Tenderloin</a><br><small>Fresh Chimichurri Sauce</small></li>
+        <li><a href="html/crispy-chicken-thighs.html">Thursday: Crispy Chicken Thighs</a><br><small>Lemon-Caper Pan Sauce</small></li>
     </ul>
 
-    <p style="margin-top: 40px; color: #7f8c8d; font-size: 0.9em; text-align: center;">
-        <a href="weeks/week3.html">&larr; Week 3</a> &middot;
-        <a href="catalog.html">All Recipes</a>
-    </p>
+    <h2>⚠️ Important Rules</h2>
+    <ul>
+        <li><strong>Spices:</strong> Add AFTER browning meat but BEFORE it dries out.</li>
+        <li><strong>Pork:</strong> Boneless tenderloin only.</li>
+        <li><strong>Medical:</strong> GF/DF/SF/EF/Low-FODMAP. No Sweet Potato. No Bok Choy.</li>
+    </ul>
 </body>
 </html>
