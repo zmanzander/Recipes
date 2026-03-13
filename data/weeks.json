@@ -1,0 +1,183 @@
+[
+  {
+    "week": 1,
+    "dates": "February 16-22, 2026",
+    "theme": "First week of meal planning",
+    "note": null,
+    "targets": "Alexander 2200 cal / 200g protein | Hanna 1900 cal / 130g protein",
+    "schedule": {
+      "sunday": {
+        "dinner": { "recipe": "lemon-herb-chicken", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "monday": {
+        "dinner": { "recipe": "turkey-sweet-potato-hash", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "tuesday": {
+        "dinner": { "recipe": "beef-stir-fry", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "wednesday": {
+        "dinner": { "recipe": "garlic-butter-shrimp", "tag": "fresh", "who": ["zander", "hanna"] }
+      }
+    },
+    "recipes": ["lemon-herb-chicken", "turkey-sweet-potato-hash", "beef-stir-fry", "garlic-butter-shrimp"],
+    "highlights": ["Lemon Herb Chicken", "Turkey & Sweet Potato Hash", "Beef Stir-Fry", "Garlic Butter Shrimp"]
+  },
+  {
+    "week": 2,
+    "dates": "February 23-27, 2026",
+    "theme": "Med Chicken Bowl meal prep begins",
+    "note": null,
+    "targets": "Alexander 2200 cal / 200g protein | Hanna 1900 cal / 130g protein",
+    "schedule": {
+      "sunday": {
+        "dinner": { "recipe": "baked-cod", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "monday": {
+        "lunch": { "recipe": "mediterranean-chicken-bowls", "tag": "prep", "who": ["zander", "hanna"] },
+        "dinner": { "recipe": "pork-tenderloin-beets", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "tuesday": {
+        "lunch": { "recipe": "mediterranean-chicken-bowls", "tag": "prep", "who": ["zander", "hanna"] },
+        "dinner": { "recipe": "harvest-chicken-salad-tacos", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "wednesday": {
+        "lunch": { "recipe": "mediterranean-chicken-bowls", "tag": "prep", "who": ["zander", "hanna"] },
+        "dinner": { "recipe": "thai-coconut-curry", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "thursday": {
+        "lunch": { "recipe": "mediterranean-chicken-bowls", "tag": "prep", "who": ["zander", "hanna"] }
+      }
+    },
+    "recipes": ["baked-cod", "mediterranean-chicken-bowls", "pork-tenderloin-beets", "harvest-chicken-salad-tacos", "thai-coconut-curry"],
+    "highlights": ["Baked Cod", "Pork Tenderloin with Beets", "Harvest Chicken Salad Tacos", "Thai Coconut Curry"]
+  },
+  {
+    "week": 3,
+    "dates": "March 1-7, 2026",
+    "theme": "Full breakfast/lunch/dinner planning",
+    "note": "Wednesday is guest dinner (3 people) — Hanna's friend joining!",
+    "targets": "Alexander 2200 cal / 200g protein | Hanna 1900 cal / 130g protein",
+    "prep": {
+      "breakfast": { "recipe": "breakfast-hash", "portions": 14, "note": "5 lbs Sun prep + 4 lbs Wed prep" },
+      "lunch": { "recipe": "beef-fajita-bowls", "portions": 8, "note": "4 lbs Sun prep Mon-Wed + 0.75 lb Wed fresh Thu" }
+    },
+    "schedule": {
+      "sunday": {
+        "dinner": { "recipe": "steak-sweet-potato-asparagus", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "monday": {
+        "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "recipe": "beef-fajita-bowls", "tag": "prep", "who": ["zander", "hanna"] },
+        "dinner": { "recipe": "honey-garlic-salmon", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "tuesday": {
+        "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "recipe": "beef-fajita-bowls", "tag": "prep", "who": ["zander", "hanna"] },
+        "dinner": { "recipe": "honey-garlic-chicken", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "wednesday": {
+        "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "recipe": "beef-fajita-bowls", "tag": "prep", "who": ["zander", "hanna"] },
+        "dinner": { "recipe": "pork-chimichurri", "tag": "guest", "who": ["zander", "hanna"], "guestNote": "Guest Dinner (3)" }
+      },
+      "thursday": {
+        "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "recipe": "beef-fajita-bowls", "tag": "prep", "who": ["zander", "hanna"] },
+        "dinner": { "recipe": "chicken-thighs-piccata", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "friday": {
+        "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "label": "Chicken Salad", "tag": "fresh", "who": ["zander", "hanna"] },
+        "dinner": { "label": "Dinner Out" }
+      },
+      "saturday": {
+        "note": "Free Day — Handle Independently"
+      }
+    },
+    "recipes": ["breakfast-hash", "beef-fajita-bowls", "steak-sweet-potato-asparagus", "honey-garlic-salmon", "honey-garlic-chicken", "pork-chimichurri", "chicken-thighs-piccata"],
+    "highlights": ["Power Hash breakfasts", "Beef Fajita Bowl lunches", "Honey Garlic Salmon & Chicken", "Pork Chimichurri (guest dinner)"]
+  },
+  {
+    "week": 4,
+    "dates": "March 9-15, 2026",
+    "theme": "Nightly fresh cook workflow",
+    "note": "Replaced sweet potato with Yukon Gold & parsnip hash. Yellow bell peppers only. All recipes updated with inline quantities and cooked weight portioning.",
+    "targets": "Alexander 2200 cal / 200g protein | Hanna 1900 cal / 130g protein",
+    "prep": {
+      "breakfast": { "recipe": "breakfast-hash", "portions": 10, "note": "Yukon Gold Turkey & Parsnip Hash" }
+    },
+    "schedule": {
+      "sunday": {
+        "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
+        "dinner": { "recipe": "herb-roasted-chicken", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "monday": {
+        "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "label": "Leftovers" },
+        "dinner": { "recipe": "turkey-squash-boats", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "tuesday": {
+        "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "label": "Leftovers" },
+        "dinner": { "recipe": "pan-seared-salmon", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "wednesday": {
+        "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "label": "Leftovers" },
+        "dinner": { "recipe": "pork-chops-mushrooms", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "thursday": {
+        "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "label": "Leftovers" },
+        "dinner": { "recipe": "shrimp-stir-fry", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "friday": {
+        "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "label": "Leftovers" },
+        "dinner": { "label": "Dinner Out" }
+      },
+      "saturday": {
+        "note": "Free Day"
+      }
+    },
+    "recipes": ["breakfast-hash", "herb-roasted-chicken", "turkey-squash-boats", "pan-seared-salmon", "pork-chops-mushrooms", "shrimp-stir-fry"],
+    "highlights": ["Herb-Roasted Whole Chicken", "Pan-Seared Salmon", "Turkey Squash Boats", "Pork Chops & Mushrooms"]
+  },
+  {
+    "week": 5,
+    "dates": "March 16-22, 2026",
+    "theme": "Nashville split schedule",
+    "note": "Zander away in Nashville Sun-Wed afternoon. Shared meals resume Wednesday night.",
+    "targets": "Alexander 2200 cal / 200g protein | Hanna 1900 cal / 130g protein",
+    "prep": {
+      "breakfast": { "recipe": "breakfast-hash", "portions": 10, "note": "Yukon Gold Turkey & Parsnip Hash" },
+      "lunch": { "recipe": "chicken-asparagus-prep", "portions": 6, "note": "Lemon-Herb Oil & Rice" }
+    },
+    "schedule": {
+      "sunday": {
+        "dinner": { "recipe": "salmon-green-beans", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
+      },
+      "monday": {
+        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
+        "dinner": { "recipe": "turkey-squash-boats", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
+      },
+      "tuesday": {
+        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
+        "dinner": { "recipe": "beef-stir-fry", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
+      },
+      "wednesday": {
+        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
+        "dinner": { "recipe": "pork-tenderloin-chimichurri", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "thursday": {
+        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["zander", "hanna"] },
+        "dinner": { "recipe": "crispy-chicken-thighs", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "friday": {
+        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["hanna"], "note": "Zander No Lunch" }
+      }
+    },
+    "recipes": ["breakfast-hash", "chicken-asparagus-prep", "salmon-green-beans", "turkey-squash-boats", "beef-stir-fry", "pork-tenderloin-chimichurri", "crispy-chicken-thighs"],
+    "highlights": ["Salmon & Green Beans (Hanna solo)", "Chicken & Asparagus lunch prep", "Pork Tenderloin Chimichurri", "Crispy Chicken Thighs"]
+  }
+]
