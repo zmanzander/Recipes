@@ -147,37 +147,37 @@
     "week": 5,
     "dates": "March 16-22, 2026",
     "theme": "Nashville split schedule",
-    "note": "Zander away in Nashville Sun-Wed afternoon. Shared meals resume Wednesday night.",
+    "note": "Zander away in Nashville Sun-Wed afternoon. Shared meals resume Wednesday night. Hanna preps whole roast chicken Sunday for her lunches.",
     "targets": "Alexander 2200 cal / 200g protein | Hanna 1900 cal / 130g protein",
     "prep": {
       "breakfast": { "recipe": "breakfast-hash", "portions": 10, "note": "Yukon Gold Turkey & Parsnip Hash" },
-      "lunch": { "recipe": "chicken-asparagus-prep", "portions": 6, "note": "Lemon-Herb Oil & Rice" }
+      "lunch": { "recipe": "herb-roasted-chicken", "portions": 4, "note": "Whole roast chicken with carrots, parsnips, zucchini for Hanna's lunches" }
     },
     "schedule": {
       "sunday": {
-        "dinner": { "recipe": "garlic-butter-shrimp", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
+        "dinner": { "recipe": "salmon-green-beans", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
       },
       "monday": {
-        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
+        "lunch": { "recipe": "herb-roasted-chicken", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
         "dinner": { "recipe": "ground-turkey-taco-bowls", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
       },
       "tuesday": {
-        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
+        "lunch": { "recipe": "herb-roasted-chicken", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
         "dinner": { "recipe": "beef-fajita-bowls", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
       },
       "wednesday": {
-        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
+        "lunch": { "recipe": "herb-roasted-chicken", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
         "dinner": { "recipe": "pork-tenderloin-chimichurri", "tag": "fresh", "who": ["zander", "hanna"] }
       },
       "thursday": {
-        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "recipe": "herb-roasted-chicken", "tag": "prep", "who": ["zander", "hanna"] },
         "dinner": { "recipe": "crispy-chicken-thighs", "tag": "fresh", "who": ["zander", "hanna"] }
       },
       "friday": {
-        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["hanna"], "note": "Zander No Lunch" }
+        "lunch": { "label": "Leftovers" }
       }
     },
-    "recipes": ["breakfast-hash", "chicken-asparagus-prep", "garlic-butter-shrimp", "ground-turkey-taco-bowls", "beef-fajita-bowls", "pork-tenderloin-chimichurri", "crispy-chicken-thighs"],
-    "highlights": ["Garlic Butter Shrimp (Hanna solo)", "Ground Turkey Taco Bowls", "Beef Fajita Bowls", "Pork Tenderloin Chimichurri"]
+    "recipes": ["breakfast-hash", "herb-roasted-chicken", "salmon-green-beans", "ground-turkey-taco-bowls", "beef-fajita-bowls", "pork-tenderloin-chimichurri", "crispy-chicken-thighs"],
+    "highlights": ["Salmon & Green Beans (Hanna solo)", "Roast Chicken lunch prep", "Beef Fajita Bowls", "Pork Tenderloin Chimichurri"]
   }
 ]
