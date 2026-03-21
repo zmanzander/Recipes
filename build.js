@@ -80,7 +80,7 @@ const PROTEIN_COLORS = {
 };
 
 function navBar(prefix) {
-  return `    <div style="background:#f8f9fa;padding:10px 15px;border-radius:5px;margin-bottom:20px;font-size:0.9em;display:flex;gap:15px;flex-wrap:wrap;"><a href="${prefix}index.html" style="color:#3498db;text-decoration:none;font-weight:600;">Current Week</a><a href="${prefix}catalog.html" style="color:#3498db;text-decoration:none;font-weight:600;">Recipe Catalog</a><a href="${prefix}weeks/index.html" style="color:#3498db;text-decoration:none;font-weight:600;">Weekly Archives</a></div>`;
+  return `    <div style="background:#f8f9fa;padding:10px 15px;border-radius:5px;margin-bottom:20px;font-size:0.9em;display:flex;gap:15px;flex-wrap:wrap;"><a href="${prefix}index.html" style="color:#3498db;text-decoration:none;font-weight:600;">Current Week</a><a href="${prefix}catalog.html" style="color:#3498db;text-decoration:none;font-weight:600;">Recipe Catalog</a><a href="${prefix}weeks/index.html" style="color:#3498db;text-decoration:none;font-weight:600;">Weekly Archives</a><a href="${prefix}friends.html" style="color:#3498db;text-decoration:none;font-weight:600;">Friends Dinners</a></div>`;
 }
 
 function dietBadges(dietArr) {
@@ -383,6 +383,7 @@ function buildCatalog() {
         <a href="index.html">Current Week</a>
         <a href="catalog.html">Recipe Catalog</a>
         <a href="weeks/index.html">Weekly Archives</a>
+        <a href="friends.html">Friends Dinners</a>
     </div>
 
     <div class="search-bar">
@@ -671,7 +672,8 @@ function buildWeekPage(week, isIndex) {
 
   let navLinks = `        <a href="${prefix}index.html">Current Week</a>
         <a href="${prefix}catalog.html">Recipe Catalog</a>
-        <a href="${prefix}weeks/index.html">Weekly Archives</a>`;
+        <a href="${prefix}weeks/index.html">Weekly Archives</a>
+        <a href="${prefix}friends.html">Friends Dinners</a>`;
 
   if (!isIndex) {
     if (prevWeek) navLinks += `\n        <a href="week${prevWeek.week}.html">&larr; Week ${prevWeek.week}</a>`;
@@ -810,6 +812,7 @@ ${highlights}
         <a href="../index.html">Current Week</a>
         <a href="../catalog.html">Recipe Catalog</a>
         <a href="index.html">Weekly Archives</a>
+        <a href="../friends.html">Friends Dinners</a>
     </div>
 
     <div class="weeks-grid">
