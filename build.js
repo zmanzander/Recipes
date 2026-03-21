@@ -49,7 +49,33 @@ const recipes = loadAllRecipes();
 
 // Sort weeks by week number
 weeks.sort((a, b) => a.week - b.week);
-const currentWeek = weeks[weeks.length - 1];
+
+// Pick current week based on date (fallback to last week if no match)
+function pickCurrentWeek(weeksList) {
+  const now = new Date();
+  for (const w of weeksList) {
+    if (!w.dates) continue;
+    const [monthDayRange, year] = w.dates.split(', ');
+    const [month, dayRange] = monthDayRange.split(' ');
+    if (!dayRange) continue;
+    const [startDay, endDay] = dayRange.split('-');
+    
+    // Simplistic check: If year matches and month matches and day is between start/end
+    // This is enough for this specific project context
+    const startDate = new Date(`${month} ${startDay}, ${year}`);
+    const endDate = new Date(`${month} ${endDay}, ${year}`);
+    // Set time to midday to avoid zone issues
+    startDate.setHours(12);
+    endDate.setHours(23);
+    
+    if (now >= startDate && now <= endDate) {
+      return w;
+    }
+  }
+  return weeksList[weeksList.length - 1];
+}
+
+const currentWeek = pickCurrentWeek(weeks);
 
 // Build a map of recipe → which weeks it appears in
 const recipeWeeks = {};
@@ -507,11 +533,13 @@ function buildMealCell(meal, prefix) {
 function buildWeekScheduleTable(week, prefix) {
   const hasBf = Object.values(week.schedule).some(d => d && d.breakfast);
   const hasLunch = Object.values(week.schedule).some(d => d && d.lunch);
+  const hasDessert = Object.values(week.schedule).some(d => d && d.dessert);
 
   let headers = '<th>Day</th>';
   if (hasBf) headers += '<th>Breakfast</th>';
   if (hasLunch) headers += '<th>Lunch</th>';
   headers += '<th>Dinner</th>';
+  if (hasDessert) headers += '<th>Dessert</th>';
 
   let rows = '';
   for (const day of DAYS) {
@@ -519,8 +547,8 @@ function buildWeekScheduleTable(week, prefix) {
     if (!sched) continue;
 
     // Handle full-row notes (like "Free Day")
-    if (sched.note && !sched.breakfast && !sched.lunch && !sched.dinner) {
-      const colCount = 1 + (hasBf ? 1 : 0) + (hasLunch ? 1 : 0) + 1;
+    if (sched.note && !sched.breakfast && !sched.lunch && !sched.dinner && !sched.dessert) {
+      const colCount = 1 + (hasBf ? 1 : 0) + (hasLunch ? 1 : 0) + 1 + (hasDessert ? 1 : 0);
       rows += `            <tr>
                 <td><strong>${DAY_NAMES[day]}</strong></td>
                 <td colspan="${colCount - 1}" style="text-align: center; color: #7f8c8d; font-style: italic;">${sched.note}</td>
@@ -532,6 +560,7 @@ function buildWeekScheduleTable(week, prefix) {
     if (hasBf) rows += `                <td>${sched.breakfast ? buildMealCell(sched.breakfast, prefix) : '-'}</td>\n`;
     if (hasLunch) rows += `                <td>${sched.lunch ? buildMealCell(sched.lunch, prefix) : '-'}</td>\n`;
     rows += `                <td>${sched.dinner ? buildMealCell(sched.dinner, prefix) : '-'}</td>\n`;
+    if (hasDessert) rows += `                <td>${sched.dessert ? buildMealCell(sched.dessert, prefix) : '-'}</td>\n`;
     rows += `            </tr>\n`;
   }
 

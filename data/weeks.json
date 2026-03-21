@@ -175,9 +175,13 @@
       },
       "friday": {
         "lunch": { "label": "Leftovers" }
+      },
+      "saturday": {
+        "dinner": { "recipe": "grilled-lime-salmon", "tag": "guest", "who": ["zander", "hanna"], "guestNote": "Guest Dinner (4)" },
+        "dessert": { "recipe": "salted-dark-chocolate-tart", "tag": "guest", "who": ["zander", "hanna"], "guestNote": "Guest Dessert (4)" }
       }
     },
-    "recipes": ["breakfast-hash", "herb-roasted-chicken", "salmon-green-beans", "ground-turkey-taco-bowls", "beef-fajita-bowls", "pork-tenderloin-chimichurri", "crispy-chicken-thighs"],
+    "recipes": ["breakfast-hash", "herb-roasted-chicken", "salmon-green-beans", "ground-turkey-taco-bowls", "beef-fajita-bowls", "pork-tenderloin-chimichurri", "crispy-chicken-thighs", "salted-dark-chocolate-tart", "grilled-lime-salmon"],
     "highlights": ["Salmon & Green Beans (Hanna solo)", "Roast Chicken lunch prep", "Beef Fajita Bowls", "Pork Tenderloin Chimichurri"],
     "shopping": {
       "produce": [
