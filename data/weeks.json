@@ -209,12 +209,12 @@
       },
       "wednesday": {
         "breakfast": { "recipe": "bacon-kale-breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
-        "lunch": { "label": "Leftovers" },
+        "lunch": { "recipe": "baja-fajita-bowl", "tag": "prep", "who": ["zander", "hanna"] },
         "dinner": { "recipe": "baja-fajita-bowl", "tag": "fresh", "who": ["zander", "hanna"] }
       },
       "thursday": {
         "breakfast": { "recipe": "bacon-kale-breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
-        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["zander", "hanna"], "soloNote": "Sep. Prep" },
+        "lunch": { "label": "Leftovers" },
         "dinner": { "recipe": "lemon-garlic-chicken-breast", "tag": "fresh", "who": ["zander", "hanna"] }
       },
       "friday": {
@@ -231,7 +231,7 @@
         "dinner": { "recipe": "steak-potatoes", "tag": "fresh", "who": ["zander", "hanna"] }
       }
     },
-    "recipes": ["bacon-kale-breakfast-hash", "oven-roasted-spatchcock-chicken", "creamy-balsamic-mushroom-pasta", "pork-tenderloin-chimichurri", "baja-fajita-bowl", "chicken-asparagus-prep", "lemon-garlic-chicken-breast", "beef-fajita-bowls", "pan-seared-salmon", "steak-potatoes"],
+    "recipes": ["bacon-kale-breakfast-hash", "oven-roasted-spatchcock-chicken", "creamy-balsamic-mushroom-pasta", "pork-tenderloin-chimichurri", "baja-fajita-bowl", "lemon-garlic-chicken-breast", "beef-fajita-bowls", "pan-seared-salmon", "steak-potatoes"],
     "highlights": ["Bacon & Turkey Hash", "Spatchcock Herb Chicken", "Balsamic Beef Pasta", "Baja Fajita Bowl"]
   }
 ]
