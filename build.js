@@ -506,8 +506,12 @@ const DAY_NAMES = { sunday: 'Sunday', monday: 'Monday', tuesday: 'Tuesday', wedn
 
 function buildMealCell(meal, prefix) {
   if (!meal) return '-';
-  if (meal.note) return `<td colspan="3" style="text-align: center; color: #7f8c8d; font-style: italic;">${meal.note}</td>`;
   if (meal.label) return meal.label;
+
+  // If only note (no recipe), return full-row note
+  if (meal.note && !meal.recipe) {
+    return `<td colspan="3" style="text-align: center; color: #7f8c8d; font-style: italic;">${meal.note}</td>`;
+  }
 
   const recipe = recipes[meal.recipe];
   const name = recipe ? recipe.title : meal.recipe;
@@ -518,6 +522,11 @@ function buildMealCell(meal, prefix) {
   const tagClass = meal.tag === 'prep' ? 'tag-prep' : meal.tag === 'guest' ? 'tag-guest' : 'tag-fresh';
   const tagLabel = meal.tag === 'prep' ? 'Prep' : meal.tag === 'guest' ? (meal.guestNote || 'Guest') : 'Fresh';
   html += `                    <span class="tag ${tagClass}">${tagLabel}</span><br>\n`;
+
+  // Add note if present (after recipe link)
+  if (meal.note) {
+    html += `                    <em style="font-size:0.85em;color:#7f8c8d;">${meal.note}</em><br>\n`;
+  }
 
   if (meal.who) {
     html += '                    ';
