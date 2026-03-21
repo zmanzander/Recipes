@@ -14,17 +14,6 @@
             color: #333;
         }
         h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        .nav {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .nav a { color: #3498db; text-decoration: none; font-weight: 600; }
-        .nav a:hover { text-decoration: underline; }
         .weeks-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -60,12 +49,8 @@
     <h1>Weekly Archives</h1>
     <p style="color: #7f8c8d; margin-top: -10px;">Browse past and current meal plans</p>
 
-    <div class="nav">
-        <a href="../index.html">Current Week</a>
-        <a href="../catalog.html">Recipe Catalog</a>
-        <a href="index.html">Weekly Archives</a>
-        <a href="../friends.html">Friends Dinners</a>
-    </div>
+    <div id="nav"></div>
+    <script src="../nav.js"></script>
 
     <div class="weeks-grid">
         <div class="week-card">
@@ -141,10 +126,5 @@
         </div>
 
     </div>
-
-    <p style="margin-top: 40px; color: #7f8c8d; font-size: 0.9em; text-align: center;">
-        <a href="../index.html">&larr; Current Week</a> &middot;
-        <a href="../catalog.html">Recipe Catalog</a>
-    </p>
 </body>
 </html>

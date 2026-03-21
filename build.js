@@ -80,7 +80,7 @@ const PROTEIN_COLORS = {
 };
 
 function navBar(prefix) {
-  return `    <div style="background:#f8f9fa;padding:10px 15px;border-radius:5px;margin-bottom:20px;font-size:0.9em;display:flex;gap:15px;flex-wrap:wrap;"><a href="${prefix}index.html" style="color:#3498db;text-decoration:none;font-weight:600;">Current Week</a><a href="${prefix}catalog.html" style="color:#3498db;text-decoration:none;font-weight:600;">Recipe Catalog</a><a href="${prefix}weeks/index.html" style="color:#3498db;text-decoration:none;font-weight:600;">Weekly Archives</a><a href="${prefix}friends.html" style="color:#3498db;text-decoration:none;font-weight:600;">Friends Dinners</a></div>`;
+  return `    <div id="nav"></div>\n    <script src="${prefix}nav.js"></script>`;
 }
 
 function dietBadges(dietArr) {
@@ -94,7 +94,7 @@ function dietBadges(dietArr) {
 }
 
 function navFooter(prefix) {
-  return `    <p style="margin-top:30px;font-size:0.9em;"><a href="${prefix}index.html" style="color:#3498db;">&larr; Current Week</a> &bull; <a href="${prefix}catalog.html" style="color:#3498db;">Recipe Catalog</a></p>`;
+  return '';
 }
 
 function escHtml(str) {
@@ -220,22 +220,6 @@ function buildCatalog() {
         }
         h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
         h2 { color: #34495e; margin-top: 30px; border-bottom: 1px solid #ecf0f1; padding-bottom: 5px; }
-
-        .nav {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .nav a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .nav a:hover { text-decoration: underline; }
 
         .search-bar { margin: 20px 0; }
         .search-bar input {
@@ -379,12 +363,8 @@ function buildCatalog() {
 <body>
     <h1>Recipe Catalog</h1>
 
-    <div class="nav">
-        <a href="index.html">Current Week</a>
-        <a href="catalog.html">Recipe Catalog</a>
-        <a href="weeks/index.html">Weekly Archives</a>
-        <a href="friends.html">Friends Dinners</a>
-    </div>
+    <div id="nav"></div>
+    <script src="nav.js"></script>
 
     <div class="search-bar">
         <input type="text" id="searchInput" placeholder="Search recipes by name, protein, ingredient...">
@@ -632,17 +612,6 @@ function weekPageStyle() {
         }
         h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
         h2 { color: #34495e; margin-top: 30px; border-bottom: 1px solid #ecf0f1; padding-bottom: 5px; }
-        .nav {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .nav a { color: #3498db; text-decoration: none; font-weight: 600; }
-        .nav a:hover { text-decoration: underline; }
         .intro { background: #ecf0f1; padding: 15px; border-radius: 5px; margin: 20px 0; }
         .note { background: #fef9e7; padding: 10px 15px; border-radius: 5px; margin: 10px 0; border-left: 4px solid #f39c12; }
         .schedule-table { width: 100%; border-collapse: collapse; margin: 20px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
@@ -670,16 +639,12 @@ function buildWeekPage(week, isIndex) {
   const prevWeek = weekIdx > 0 ? weeks[weekIdx - 1] : null;
   const nextWeek = weekIdx < weeks.length - 1 ? weeks[weekIdx + 1] : null;
 
-  let navLinks = `        <a href="${prefix}index.html">Current Week</a>
-        <a href="${prefix}catalog.html">Recipe Catalog</a>
-        <a href="${prefix}weeks/index.html">Weekly Archives</a>
-        <a href="${prefix}friends.html">Friends Dinners</a>`;
-
+  let navAttrs = '';
   if (!isIndex) {
-    if (prevWeek) navLinks += `\n        <a href="week${prevWeek.week}.html">&larr; Week ${prevWeek.week}</a>`;
+    if (prevWeek) navAttrs += ` data-prev-week="week${prevWeek.week}.html" data-prev-label="Week ${prevWeek.week}"`;
     if (nextWeek) {
       const nextHref = nextWeek.week === currentWeek.week ? `${prefix}index.html` : `week${nextWeek.week}.html`;
-      navLinks += `\n        <a href="${nextHref}">Week ${nextWeek.week} &rarr;</a>`;
+      navAttrs += ` data-next-week="${nextHref}" data-next-label="Week ${nextWeek.week}"`;
     }
   }
 
@@ -703,9 +668,8 @@ ${weekPageStyle()}
     <h1>Week ${week.week} Meal Plan${isIndex ? ': ' + week.dates : ''}</h1>
     ${!isIndex ? `<p style="color: #7f8c8d; margin-top: -10px;">${week.dates}</p>` : ''}
 
-    <div class="nav">
-${navLinks}
-    </div>
+    <div id="nav"${navAttrs}></div>
+    <script src="${prefix}nav.js"></script>
 ${introHtml}${noteHtml}
 
     <h2>Daily Schedule</h2>
@@ -762,17 +726,6 @@ ${highlights}
             color: #333;
         }
         h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        .nav {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .nav a { color: #3498db; text-decoration: none; font-weight: 600; }
-        .nav a:hover { text-decoration: underline; }
         .weeks-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -808,20 +761,11 @@ ${highlights}
     <h1>Weekly Archives</h1>
     <p style="color: #7f8c8d; margin-top: -10px;">Browse past and current meal plans</p>
 
-    <div class="nav">
-        <a href="../index.html">Current Week</a>
-        <a href="../catalog.html">Recipe Catalog</a>
-        <a href="index.html">Weekly Archives</a>
-        <a href="../friends.html">Friends Dinners</a>
-    </div>
+    <div id="nav"></div>
+    <script src="../nav.js"></script>
 
     <div class="weeks-grid">
 ${weekCards}    </div>
-
-    <p style="margin-top: 40px; color: #7f8c8d; font-size: 0.9em; text-align: center;">
-        <a href="../index.html">&larr; Current Week</a> &middot;
-        <a href="../catalog.html">Recipe Catalog</a>
-    </p>
 </body>
 </html>`;
 }
