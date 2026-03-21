@@ -4,31 +4,31 @@
 ## 🥩 Proteins
 - [ ] **Whole Chicken:** 1 (4-5 lbs, for spatchcock) (Sun Dinner + Mon Lunch)
 - [ ] **Flank Steak:** 1.5 lbs (Wed Baja Bowl, scale for Thu lunch)
-- [ ] **Ground Beef (90/10):** 2 lbs (Mon Pasta, scale for Tue lunch)
-- [ ] **Ground Turkey (93% lean):** 6 lbs (Breakfast Hash)
+- [ ] **Ground Beef (90/10):** 3 lbs (Mon Pasta, scale for Tue lunch)
+- [ ] **Ground Turkey (93% lean):** 3 lbs (Breakfast Hash)
 - [ ] **Boneless Pork Tenderloin:** 3 lbs (Tue Dinner, scale for Wed lunch)
+- [ ] **Chicken Breast (boneless, skinless):** 1.5 lbs (Thu Lemon-Garlic)
 - [ ] **Salmon Fillets (Skinless):** 2.2 lbs (TONIGHT'S Dinner only)
-- [ ] **Bacon (Nitrate-free):** 2 lbs (Breakfast Hash)
+- [ ] **Bacon (Nitrate-free):** 1 lb (Breakfast Hash)
 
 ## 🥬 Produce
 - [ ] **Mango:** 1 large (Tonight)
 - [ ] **Avocado:** 1 large (Tonight)
-- [ ] **Yellow Bell Peppers:** 7 total (1 Tonight, 3 Wed, 3 Sat)
-- [ ] **Yukon Gold Potatoes:** 8 lb bag (Hash + Sun Dinner)
-- [ ] **Oyster Mushrooms:** 5x 8oz packs (Hash + Mon Pasta)
-- [ ] **Kale:** 3 large bunches (Hash)
-- [ ] **Spinach:** 1 large bag (Mon Pasta)
-- [ ] **Asparagus:** 1 large bunch (Wed Prep)
-- [ ] **Green Beans:** 2 lbs (Sun Dinner, Thu Dinner)
-- [ ] **Carrots:** 5 lb bag (Sun/Sat/Sun Dinners)
-- [ ] **Parsnips:** 8 large (Tue Dinner + Hash)
-- [ ] **Green Onions:** 4 bunches (1 Tonight, 3 Week 6)
-- [ ] **Fresh Cilantro:** 4 bunches (1 Tonight, 1 Tue, 1 Wed, 1 Sat)
-- [ ] **Fresh Parsley:** 4 bunches (Tue Chimichurri, Sun Steak)
-- [ ] **Fresh Rosemary:** 2 packs (Sun Dinners)
-- [ ] **Fresh Thyme:** 2 packs (Sun Dinners)
-- [ ] **Limes:** 7 total (5 Tonight, 2 Wed)
-- [ ] **Lemons:** 4 total (2 Tonight, 2 Sun)
+- [ ] **Yellow Bell Peppers:** 9 total (1 Tonight, 8 Week 6: 2 lbs Pork + 3 Baja Bowl)
+- [ ] **Yukon Gold Potatoes:** 2 lbs (Hash only)
+- [ ] **Oyster Mushrooms:** 4x 8oz packs = 28 oz (12 oz Hash + 16 oz Pasta)
+- [ ] **Kale:** 2 bunches = 3 cups chopped (Hash)
+- [ ] **Spinach:** 1 bag 5-6 oz (Mon Pasta)
+- [ ] **Green Beans:** 3 lbs (2 lbs Sun Chicken + 1 lb Thu Lemon-Garlic)
+- [ ] **Carrots:** 3 lbs (1 cup shredded Hash + 2 lbs whole Sun Chicken)
+- [ ] **Zucchini:** 2 lbs (Tue Pork)
+- [ ] **Green Onions:** 2 bunches (1 Tonight, 1/4 cup tops for Hash)
+- [ ] **Fresh Cilantro:** 3 bunches (1 Tonight, 1/2 cup Pork, 1 bunch Wed Baja)
+- [ ] **Fresh Parsley:** 2 bunches (Tue Chimichurri + Sun Chicken + Hash)
+- [ ] **Fresh Rosemary:** 1 pack (Sun Chicken)
+- [ ] **Fresh Thyme:** 1 pack (Sun Chicken)
+- [ ] **Limes:** 7 total (5 Tonight, 2 Wed Baja)
+- [ ] **Lemons:** 3 total (2 Tonight, 1 Week 6)
 
 ## 🌾 Pantry & Tonight's Dessert
 - [ ] **Dark Chocolate (70%+):** 1 lb (Tonight)
@@ -53,4 +53,4 @@
 ---
 **Recipes Referenced:**
 - Tonight: Grilled Lime Salmon w/ Mango Salsa + Salted Dark Chocolate Tart
-- Week 6: Herb-Roasted Chicken, Balsamic Mushroom Pasta, Pork Chimichurri, Baja Fajita Bowls, Lemon-Garlic Chicken, Beef Fajita Bowls, Salmon, Steak & Potatoes.
+- Week 6: Bacon/Turkey/Kale Breakfast Hash (Mon-Fri), Oven Roasted Spatchcock Chicken (Sun), Creamy Balsamic Mushroom Pasta (Mon), Pork Tenderloin w/ Chimichurri (Tue), Baja Fajita Bowl (Wed), Zesty Lemon-Garlic Chicken Breast (Thu).
