@@ -580,6 +580,45 @@ function buildWeekRecipeList(week, prefix) {
   return `    <ul class="recipe-list">\n${items}    </ul>`;
 }
 
+function buildShoppingList(shopping) {
+  let html = '\n    <h2>🛒 Shopping List</h2>\n    <div style="background: #fdfefe; border: 1px solid #d5dbdb; padding: 20px; border-radius: 8px;">\n';
+  
+  if (shopping.produce && shopping.produce.length > 0) {
+    html += '        <h3 style="margin-top: 0; color: #27ae60;">Produce</h3>\n        <ul style="columns: 2; list-style-type: none; padding: 0;">\n';
+    shopping.produce.forEach(item => {
+      html += `            <li style="margin-bottom: 5px;">☐ ${item}</li>\n`;
+    });
+    html += '        </ul>\n';
+  }
+  
+  if (shopping.proteins && shopping.proteins.length > 0) {
+    html += '        <h3 style="color: #e74c3c;">Proteins</h3>\n        <ul style="list-style-type: none; padding: 0;">\n';
+    shopping.proteins.forEach(item => {
+      html += `            <li style="margin-bottom: 5px;">☐ ${item}</li>\n`;
+    });
+    html += '        </ul>\n';
+  }
+  
+  if (shopping.dairy && shopping.dairy.length > 0) {
+    html += '        <h3 style="color: #3498db;">Dairy & Refrigerated</h3>\n        <ul style="list-style-type: none; padding: 0;">\n';
+    shopping.dairy.forEach(item => {
+      html += `            <li style="margin-bottom: 5px;">☐ ${item}</li>\n`;
+    });
+    html += '        </ul>\n';
+  }
+  
+  if (shopping.pantry && shopping.pantry.length > 0) {
+    html += '        <h3 style="color: #d35400;">Pantry & Frozen</h3>\n        <ul style="list-style-type: none; padding: 0;">\n';
+    shopping.pantry.forEach(item => {
+      html += `            <li style="margin-bottom: 5px;">☐ ${item}</li>\n`;
+    });
+    html += '        </ul>\n';
+  }
+  
+  html += '    </div>\n';
+  return html;
+}
+
 function weekPageStyle() {
   return `    <style>
         body {
@@ -672,6 +711,7 @@ ${buildWeekScheduleTable(week, prefix)}
 
     <h2>Recipes</h2>
 ${buildWeekRecipeList(week, prefix)}
+${week.shopping ? buildShoppingList(week.shopping) : ''}
 
     <p style="margin-top: 40px; color: #7f8c8d; font-size: 0.9em; text-align: center;">
         ${prevWeek ? `<a href="${isIndex ? 'weeks/' : ''}week${prevWeek.week}.html">&larr; Week ${prevWeek.week}</a> &middot; ` : ''}

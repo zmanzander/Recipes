@@ -147,37 +147,122 @@
     "week": 5,
     "dates": "March 16-22, 2026",
     "theme": "Nashville split schedule",
-    "note": "Zander away in Nashville Sun-Wed afternoon. Shared meals resume Wednesday night.",
+    "note": "Zander away in Nashville Sun-Wed afternoon. Shared meals resume Wednesday night. Hanna preps whole roast chicken Sunday for her lunches.",
     "targets": "Alexander 2200 cal / 200g protein | Hanna 1900 cal / 130g protein",
     "prep": {
       "breakfast": { "recipe": "breakfast-hash", "portions": 10, "note": "Yukon Gold Turkey & Parsnip Hash" },
-      "lunch": { "recipe": "chicken-asparagus-prep", "portions": 6, "note": "Lemon-Herb Oil & Rice" }
+      "lunch": { "recipe": "herb-roasted-chicken", "portions": 4, "note": "Whole roast chicken with carrots, parsnips, zucchini for Hanna's lunches" }
     },
     "schedule": {
       "sunday": {
         "dinner": { "recipe": "salmon-green-beans", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
       },
       "monday": {
-        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
-        "dinner": { "recipe": "turkey-squash-boats", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
+        "lunch": { "recipe": "herb-roasted-chicken", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
+        "dinner": { "recipe": "ground-turkey-taco-bowls", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
       },
       "tuesday": {
-        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
-        "dinner": { "recipe": "beef-stir-fry", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
+        "lunch": { "recipe": "herb-roasted-chicken", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
+        "dinner": { "recipe": "beef-fajita-bowls", "tag": "fresh", "who": ["hanna"], "soloNote": "Hanna Solo" }
       },
       "wednesday": {
-        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
+        "lunch": { "recipe": "herb-roasted-chicken", "tag": "prep", "who": ["hanna"], "soloNote": "Hanna Solo" },
         "dinner": { "recipe": "pork-tenderloin-chimichurri", "tag": "fresh", "who": ["zander", "hanna"] }
       },
       "thursday": {
-        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "recipe": "herb-roasted-chicken", "tag": "prep", "who": ["zander", "hanna"] },
         "dinner": { "recipe": "crispy-chicken-thighs", "tag": "fresh", "who": ["zander", "hanna"] }
       },
       "friday": {
-        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["hanna"], "note": "Zander No Lunch" }
+        "lunch": { "label": "Leftovers" }
       }
     },
-    "recipes": ["breakfast-hash", "chicken-asparagus-prep", "salmon-green-beans", "turkey-squash-boats", "beef-stir-fry", "pork-tenderloin-chimichurri", "crispy-chicken-thighs"],
-    "highlights": ["Salmon & Green Beans (Hanna solo)", "Chicken & Asparagus lunch prep", "Pork Tenderloin Chimichurri", "Crispy Chicken Thighs"]
+    "recipes": ["breakfast-hash", "herb-roasted-chicken", "salmon-green-beans", "ground-turkey-taco-bowls", "beef-fajita-bowls", "pork-tenderloin-chimichurri", "crispy-chicken-thighs"],
+    "highlights": ["Salmon & Green Beans (Hanna solo)", "Roast Chicken lunch prep", "Beef Fajita Bowls", "Pork Tenderloin Chimichurri"],
+    "shopping": {
+      "produce": [
+        "Yukon Gold Potatoes (3 lbs)",
+        "Parsnips (1.5 lbs)",
+        "Carrots (1 small bag)",
+        "Asparagus (2 bunches)",
+        "Green Beans (1 bunch)",
+        "Yellow Bell Peppers (4 total)",
+        "Zucchini (1 whole)",
+        "Spaghetti Squash (1 small)",
+        "Green Onions (1 bunch - use tops only)",
+        "Fresh Parsley (2 bunches)",
+        "Fresh Cilantro (1 bunch)",
+        "Lemons (4 total)"
+      ],
+      "proteins": [
+        "Ground Turkey (93% lean) (3 lbs)",
+        "Chicken Breast (3 lbs)",
+        "Salmon Fillets (0.5 lb - Hanna Solo portion)",
+        "Ground Turkey (0.5 lb - for Hanna's Squash Boats)",
+        "Ground Beef (0.5 lb - for Hanna's Stir-fry)",
+        "Boneless Pork Tenderloin (1.5 lbs)",
+        "Chicken Thighs (Bone-in, skin-on) (1.5 lbs)"
+      ],
+      "dairy": [
+        "Salsa (Low-FODMAP / Fody brand) (1 jar)"
+      ],
+      "pantry": [
+        "Garlic-infused Olive Oil (Refill)",
+        "Jasmine Rice (Check stock)",
+        "Capers (1 small jar)",
+        "Chicken Stock (1 carton - Low-FODMAP/GF)",
+        "Coconut Aminos (Soy-free)"
+      ]
+    }
+  },
+  {
+    "week": 6,
+    "dates": "March 23-29, 2026",
+    "theme": "Strict Low-FODMAP Medical Protocol",
+    "note": "GF/DF/SF/EF/Low-FODMAP. No onion, garlic, soy, eggs, or sweet potato. Yellow bell peppers only. Lunches are leftovers from shared dinners.",
+    "targets": "Alexander 2400-2800 kcal / 160-200g protein | Hanna 1900 kcal / 130g protein",
+    "prep": {
+      "breakfast": { "recipe": "breakfast-hash", "portions": 10, "note": "Yukon Gold Turkey & Parsnip Hash (Mon-Fri)" }
+    },
+    "schedule": {
+      "sunday": {
+        "dinner": { "recipe": "herb-roasted-chicken", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "monday": {
+        "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "label": "Leftovers" },
+        "dinner": { "recipe": "beef-stir-fry", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "tuesday": {
+        "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "label": "Leftovers" },
+        "dinner": { "recipe": "pork-tenderloin-chimichurri", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "wednesday": {
+        "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "label": "Leftovers" },
+        "dinner": { "recipe": "baked-cod", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "thursday": {
+        "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["zander", "hanna"], "soloNote": "Sep. Prep" },
+        "dinner": { "recipe": "crispy-chicken-thighs", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "friday": {
+        "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
+        "lunch": { "label": "Leftovers" },
+        "dinner": { "label": "Dinner Out" }
+      },
+      "saturday": {
+        "lunch": { "recipe": "beef-fajita-bowls", "tag": "fresh", "who": ["zander", "hanna"] },
+        "dinner": { "recipe": "pan-seared-salmon", "tag": "fresh", "who": ["zander", "hanna"] }
+      },
+      "sunday": {
+        "lunch": { "label": "Leftovers" },
+        "dinner": { "recipe": "herb-roasted-chicken", "tag": "fresh", "who": ["zander", "hanna"] }
+      }
+    },
+    "recipes": ["breakfast-hash", "herb-roasted-chicken", "beef-stir-fry", "pork-tenderloin-chimichurri", "baked-cod", "chicken-asparagus-prep", "crispy-chicken-thighs", "beef-fajita-bowls", "pan-seared-salmon"],
+    "highlights": ["Strict Low-FODMAP Hash", "Beef Stir-Fry", "Baked Cod with Chimichurri", "Crispy Chicken Thighs"]
   }
 ]
