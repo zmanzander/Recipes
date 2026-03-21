@@ -246,7 +246,7 @@
       "thursday": {
         "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
         "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["zander", "hanna"], "soloNote": "Sep. Prep" },
-        "dinner": { "recipe": "crispy-chicken-thighs", "tag": "fresh", "who": ["zander", "hanna"] }
+        "dinner": { "recipe": "lemon-herb-boneless-thighs", "tag": "fresh", "who": ["zander", "hanna"] }
       },
       "friday": {
         "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
@@ -262,7 +262,7 @@
         "dinner": { "recipe": "herb-roasted-chicken", "tag": "fresh", "who": ["zander", "hanna"] }
       }
     },
-    "recipes": ["breakfast-hash", "herb-roasted-chicken", "beef-stir-fry", "pork-tenderloin-chimichurri", "baked-cod", "chicken-asparagus-prep", "crispy-chicken-thighs", "beef-fajita-bowls", "pan-seared-salmon"],
-    "highlights": ["Strict Low-FODMAP Hash", "Beef Stir-Fry", "Baked Cod with Chimichurri", "Crispy Chicken Thighs"]
+    "recipes": ["breakfast-hash", "herb-roasted-chicken", "beef-stir-fry", "pork-tenderloin-chimichurri", "baked-cod", "chicken-asparagus-prep", "lemon-herb-boneless-thighs", "beef-fajita-bowls", "pan-seared-salmon"],
+    "highlights": ["Strict Low-FODMAP Hash", "Beef Stir-Fry", "Baked Cod with Chimichurri", "Lemon Herb Thighs"]
   }
 ]
