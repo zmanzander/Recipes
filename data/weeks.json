@@ -254,8 +254,7 @@
         "dinner": { "label": "Dinner Out" }
       },
       "saturday": {
-        "lunch": { "recipe": "beef-fajita-bowls", "tag": "fresh", "who": ["zander", "hanna"] },
-        "dinner": { "recipe": "pan-seared-salmon", "tag": "fresh", "who": ["zander", "hanna"] }
+        "note": "Free Day"
       },
       "sunday": {
         "lunch": { "label": "Leftovers" },
