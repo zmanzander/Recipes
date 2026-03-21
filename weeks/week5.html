@@ -15,17 +15,6 @@
         }
         h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
         h2 { color: #34495e; margin-top: 30px; border-bottom: 1px solid #ecf0f1; padding-bottom: 5px; }
-        .nav {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .nav a { color: #3498db; text-decoration: none; font-weight: 600; }
-        .nav a:hover { text-decoration: underline; }
         .intro { background: #ecf0f1; padding: 15px; border-radius: 5px; margin: 20px 0; }
         .note { background: #fef9e7; padding: 10px 15px; border-radius: 5px; margin: 10px 0; border-left: 4px solid #f39c12; }
         .schedule-table { width: 100%; border-collapse: collapse; margin: 20px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
@@ -50,13 +39,8 @@
     <h1>Week 5 Meal Plan</h1>
     <p style="color: #7f8c8d; margin-top: -10px;">March 16-22, 2026</p>
 
-    <div class="nav">
-        <a href="../index.html">Current Week</a>
-        <a href="../catalog.html">Recipe Catalog</a>
-        <a href="../weeks/index.html">Weekly Archives</a>
-        <a href="week4.html">&larr; Week 4</a>
-        <a href="../index.html">Week 6 &rarr;</a>
-    </div>
+    <div id="nav" data-prev-week="week4.html" data-prev-label="Week 4" data-next-week="../index.html" data-next-label="Week 6"></div>
+    <script src="../nav.js"></script>
 
     <div class="intro">
         <p><strong>Targets:</strong> Alexander 2200 cal / 200g protein | Hanna 1900 cal / 130g protein</p>
@@ -203,10 +187,6 @@
     </div>
 
 
-    <p style="margin-top: 40px; color: #7f8c8d; font-size: 0.9em; text-align: center;">
-        <a href="week4.html">&larr; Week 4</a> &middot; 
-        <a href="../catalog.html">All Recipes</a>
-         &middot; <a href="../index.html">Week 6 &rarr;</a>
-    </p>
+
 </body>
 </html>

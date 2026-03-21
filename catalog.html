@@ -16,22 +16,6 @@
         h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
         h2 { color: #34495e; margin-top: 30px; border-bottom: 1px solid #ecf0f1; padding-bottom: 5px; }
 
-        .nav {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .nav a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .nav a:hover { text-decoration: underline; }
-
         .search-bar { margin: 20px 0; }
         .search-bar input {
             width: 100%;
@@ -174,11 +158,8 @@
 <body>
     <h1>Recipe Catalog</h1>
 
-    <div class="nav">
-        <a href="index.html">Current Week</a>
-        <a href="catalog.html">Recipe Catalog</a>
-        <a href="weeks/index.html">Weekly Archives</a>
-    </div>
+    <div id="nav"></div>
+    <script src="nav.js"></script>
 
     <div class="search-bar">
         <input type="text" id="searchInput" placeholder="Search recipes by name, protein, ingredient...">
@@ -509,10 +490,6 @@
             </div>
         </div>
     </div>
-
-    <p style="margin-top: 40px; color: #7f8c8d; font-size: 0.9em; text-align: center;">
-        <a href="index.html">&larr; Back to Current Week</a>
-    </p>
 
     <script>
         const searchInput = document.getElementById('searchInput');
