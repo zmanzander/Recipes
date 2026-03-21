@@ -84,6 +84,22 @@
         .protein-seafood { background: #d6eaf8; color: #2980b9; }
         .protein-breakfast { background: #f9e79f; color: #7d6608; }
 
+        .rating { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 0.75em; margin-left: 4px; }
+        .rating-loved { background: #d5f4e6; color: #27ae60; }
+        .rating-good { background: #d6eaf8; color: #2980b9; }
+        .rating-skip { background: #fadbd8; color: #e74c3c; }
+
+        .week-tags { margin-top: 6px; }
+        .week-tag {
+            display: inline-block;
+            padding: 1px 8px;
+            border-radius: 3px;
+            font-size: 0.7em;
+            background: #eee;
+            color: #555;
+            margin-right: 3px;
+        }
+
         .diet-tags { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 3px; }
         .diet-tag {
             display: inline-block;
@@ -98,6 +114,18 @@
         .diet-ef { background: #fef9e7; color: #7d6608; }
         .diet-sf { background: #fdedec; color: #922b21; }
         .diet-lf { background: #f4ecf7; color: #6c3483; }
+
+        .filter-section-label {
+            font-size: 0.8em;
+            font-weight: 600;
+            color: #7f8c8d;
+            margin-right: 6px;
+            align-self: center;
+        }
+        .filter-btn.diet-filter { font-size: 0.82em; padding: 4px 12px; }
+        .filter-btn.diet-filter.active { background: #16a085; border-color: #16a085; color: white; }
+        .filter-btn.diet-filter:hover { border-color: #16a085; color: #16a085; }
+        .filter-btn.diet-filter.active:hover { color: white; }
 
         .recipe-card[data-protein="chicken"] { border-left-color: #e67e22; }
         .recipe-card[data-protein="beef"] { border-left-color: #c0392b; }
@@ -161,13 +189,41 @@
     <div class="recipe-grid" id="recipeGrid">
 
         <!-- CHICKEN -->
-        <div class="recipe-card" data-protein="chicken" data-weeks="6" data-diet="gf df ef sf lf" data-search="zesty lemon-garlic chicken breast chicken gluten-free dairy-free egg-free soy-free low-fodmap">
-            <a href="recipes/lemon-garlic-chicken-breast.html">Zesty Lemon-Garlic Chicken Breast</a>
+        <div class="recipe-card" data-protein="chicken" data-weeks="" data-diet="gf df ef sf lf" data-search="lunch prep: lemon-herb chicken & asparagus chicken gluten-free dairy-free egg-free soy-free low-fodmap">
+            <a href="recipes/chicken-asparagus-prep.html">Lunch Prep: Lemon-Herb Chicken & Asparagus</a>
             <div class="recipe-meta">
-                <span class="protein-tag protein-chicken">Chicken</span> Prep: 10 min | Cook: 20 min | Total: 30 min
+                <span class="protein-tag protein-chicken">Chicken</span> Prep: 15 min | Cook: 25 min | Total: 40 min
             </div>
             <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span><span class="diet-tag diet-lf">Low-FODMAP</span></div>
-            <div class="week-tags"><span class="week-tag">Week 6</span></div>
+            <div class="week-tags"><span class="week-tag">Not yet scheduled</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="chicken" data-weeks="3" data-diet="gf ef" data-search="crispy skin chicken thighs with lemon-caper sauce chicken gluten-free egg-free">
+            <a href="recipes/chicken-thighs-piccata.html">Crispy Skin Chicken Thighs with Lemon-Caper Sauce</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-chicken">Chicken</span> Prep: 5 min | Cook: 20 min | Total: 25 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-ef">EF</span></div>
+            <div class="week-tags"><span class="week-tag">Week 3</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="chicken" data-weeks="5" data-diet="gf df ef sf lf" data-search="crispy chicken thighs with lemon-caper sauce chicken gluten-free dairy-free egg-free soy-free low-fodmap">
+            <a href="recipes/crispy-chicken-thighs.html">Crispy Chicken Thighs with Lemon-Caper Sauce</a>
+            <span class="rating rating-skip">Skip</span>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-chicken">Chicken</span> 
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span><span class="diet-tag diet-lf">Low-FODMAP</span></div>
+            <div class="week-tags"><span class="week-tag">Week 5</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="chicken" data-weeks="2" data-diet="gf df ef" data-search="harvest chicken salad tacos (gf/df) chicken gluten-free dairy-free egg-free">
+            <a href="recipes/harvest-chicken-salad-tacos.html">Harvest Chicken Salad Tacos (GF/DF)</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-chicken">Chicken</span> Prep: 15 min | Cook: 20 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span></div>
+            <div class="week-tags"><span class="week-tag">Week 2</span></div>
         </div>
 
         <div class="recipe-card" data-protein="chicken" data-weeks="4,5" data-diet="gf df ef sf lf" data-search="herb-roasted chicken & vegetables chicken gluten-free dairy-free egg-free soy-free low-fodmap">
@@ -179,6 +235,43 @@
             <div class="week-tags"><span class="week-tag">Week 4</span> <span class="week-tag">Week 5</span></div>
         </div>
 
+        <div class="recipe-card" data-protein="chicken" data-weeks="3" data-diet="gf df ef" data-search="honey garlic chicken chicken gluten-free dairy-free egg-free">
+            <a href="recipes/honey-garlic-chicken.html">Honey Garlic Chicken</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-chicken">Chicken</span> Prep: 15 min | Cook: 25 min | Total: 40 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span></div>
+            <div class="week-tags"><span class="week-tag">Week 3</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="chicken" data-weeks="" data-diet="gf df ef sf lf" data-search="lemon herb boneless chicken thighs chicken gluten-free dairy-free egg-free soy-free low-fodmap">
+            <a href="recipes/lemon-herb-boneless-thighs.html">Lemon Herb Boneless Chicken Thighs</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-chicken">Chicken</span> Prep: 15 min | Cook: 20 min | Total: 35 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span><span class="diet-tag diet-lf">Low-FODMAP</span></div>
+            <div class="week-tags"><span class="week-tag">Not yet scheduled</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="chicken" data-weeks="1" data-diet="gf df ef sf" data-search="lemon herb chicken thighs with roasted vegetables chicken gluten-free dairy-free egg-free soy-free">
+            <a href="recipes/lemon-herb-chicken.html">Lemon Herb Chicken Thighs with Roasted Vegetables</a>
+            <span class="rating rating-loved">Loved</span>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-chicken">Chicken</span> Prep: 15 min | Cook: 35 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span></div>
+            <div class="week-tags"><span class="week-tag">Week 1</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="chicken" data-weeks="2" data-diet="gf df ef sf" data-search="mediterranean chicken bowls chicken gluten-free dairy-free egg-free soy-free">
+            <a href="recipes/mediterranean-chicken-bowls.html">Mediterranean Chicken Bowls</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-chicken">Chicken</span> Prep: 20 min | Cook: 70 min | Total: 90 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span></div>
+            <div class="week-tags"><span class="week-tag">Week 2</span></div>
+        </div>
+
         <div class="recipe-card" data-protein="chicken" data-weeks="6" data-diet="gf df ef sf lf" data-search="oven roasted spatchcock chicken with herbs chicken gluten-free dairy-free egg-free soy-free low-fodmap">
             <a href="recipes/oven-roasted-spatchcock-chicken.html">Oven Roasted Spatchcock Chicken with Herbs</a>
             <div class="recipe-meta">
@@ -188,23 +281,25 @@
             <div class="week-tags"><span class="week-tag">Week 6</span></div>
         </div>
 
+
         <!-- BEEF -->
-        <div class="recipe-card" data-protein="beef" data-weeks="6" data-diet="gf df ef sf lf" data-search="baja fajita bowl beef gluten-free dairy-free egg-free soy-free low-fodmap">
-            <a href="recipes/baja-fajita-bowl.html">Baja Fajita Bowl</a>
+        <div class="recipe-card" data-protein="beef" data-weeks="3,5" data-diet="gf df ef sf lf" data-search="low-fodmap beef fajita bowls beef gluten-free dairy-free egg-free soy-free low-fodmap">
+            <a href="recipes/beef-fajita-bowls.html">Low-FODMAP Beef Fajita Bowls</a>
             <div class="recipe-meta">
-                <span class="protein-tag protein-beef">Beef</span> Prep: 15 min | Cook: 25 min
+                <span class="protein-tag protein-beef">Beef</span> Prep: 20 min | Cook: 25 min | Total: 45 min
             </div>
             <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span><span class="diet-tag diet-lf">Low-FODMAP</span></div>
-            <div class="week-tags"><span class="week-tag">Week 6</span></div>
+            <div class="week-tags"><span class="week-tag">Week 3</span> <span class="week-tag">Week 5</span></div>
         </div>
 
-        <div class="recipe-card" data-protein="beef" data-weeks="6" data-diet="gf df ef sf lf" data-search="steak & potatoes beef gluten-free dairy-free egg-free soy-free low-fodmap">
-            <a href="recipes/steak-potatoes.html">Steak & Potatoes</a>
+        <div class="recipe-card" data-protein="beef" data-weeks="1" data-diet="gf df ef" data-search="tuesday: beef & yellow pepper stir-fry beef gluten-free dairy-free egg-free">
+            <a href="recipes/beef-stir-fry.html">Tuesday: Beef & Yellow Pepper Stir-fry</a>
+            <span class="rating rating-good">Good</span>
             <div class="recipe-meta">
-                <span class="protein-tag protein-beef">Beef</span> Prep: 15 min | Cook: 30 min | Total: 45 min
+                <span class="protein-tag protein-beef">Beef</span> 
             </div>
-            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span><span class="diet-tag diet-lf">Low-FODMAP</span></div>
-            <div class="week-tags"><span class="week-tag">Week 6</span></div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span></div>
+            <div class="week-tags"><span class="week-tag">Week 1</span></div>
         </div>
 
         <div class="recipe-card" data-protein="beef" data-weeks="6" data-diet="gf df ef sf lf" data-search="creamy balsamic mushroom pasta with ground beef beef gluten-free dairy-free egg-free soy-free low-fodmap">
@@ -216,33 +311,167 @@
             <div class="week-tags"><span class="week-tag">Week 6</span></div>
         </div>
 
-        <div class="recipe-card" data-protein="beef" data-weeks="3,5" data-diet="gf df ef sf lf" data-search="low-fodmap beef fajita bowls beef gluten-free dairy-free egg-free soy-free low-fodmap">
-            <a href="recipes/beef-fajita-bowls.html">Low-FODMAP Beef Fajita Bowls</a>
+        <div class="recipe-card" data-protein="beef" data-weeks="3" data-diet="gf df ef sf" data-search="grilled steak with roasted sweet potato & asparagus beef gluten-free dairy-free egg-free soy-free">
+            <a href="recipes/steak-sweet-potato-asparagus.html">Grilled Steak with Roasted Sweet Potato & Asparagus</a>
             <div class="recipe-meta">
-                <span class="protein-tag protein-beef">Beef</span> Prep: 20 min | Cook: 25 min | Total: 45 min
+                <span class="protein-tag protein-beef">Beef</span> Prep: 10 min | Cook: 20 min | Total: 30 min
             </div>
-            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span><span class="diet-tag diet-lf">Low-FODMAP</span></div>
-            <div class="week-tags"><span class="week-tag">Week 3</span> <span class="week-tag">Week 5</span></div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span></div>
+            <div class="week-tags"><span class="week-tag">Week 3</span></div>
         </div>
 
-        <!-- SEAFOOD -->
-        <div class="recipe-card" data-protein="seafood" data-weeks="2" data-diet="gf ef" data-search="baked cod with lemon caper sauce & roasted broccoli seafood gluten-free egg-free">
-            <a href="recipes/baked-cod.html">Baked Cod with Lemon Caper Sauce & Roasted Broccoli</a>
+
+        <!-- TURKEY -->
+        <div class="recipe-card" data-protein="turkey" data-weeks="5" data-diet="gf df ef sf" data-search="ground turkey taco bowls turkey gluten-free dairy-free egg-free soy-free">
+            <a href="recipes/ground-turkey-taco-bowls.html">Ground Turkey Taco Bowls</a>
             <div class="recipe-meta">
-                <span class="protein-tag protein-seafood">Seafood</span> Prep: 10 min | Cook: 25 min | Total: 35 min
+                <span class="protein-tag protein-turkey">Turkey</span> Prep: 10 min | Cook: 20 min | Total: 30 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span></div>
+            <div class="week-tags"><span class="week-tag">Week 5</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="turkey" data-weeks="" data-diet="gf df ef sf" data-search="turkey burgers with sweet potato fries turkey gluten-free dairy-free egg-free soy-free">
+            <a href="recipes/turkey-burgers.html">Turkey Burgers with Sweet Potato Fries</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-turkey">Turkey</span> Prep: 15 min | Cook: 25 min | Total: 40 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span></div>
+            <div class="week-tags"><span class="week-tag">Not yet scheduled</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="turkey" data-weeks="4" data-diet="gf df ef sf lf" data-search="monday: turkey spaghetti squash boats turkey gluten-free dairy-free egg-free soy-free low-fodmap">
+            <a href="recipes/turkey-squash-boats.html">Monday: Turkey Spaghetti Squash Boats</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-turkey">Turkey</span> 
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span><span class="diet-tag diet-lf">Low-FODMAP</span></div>
+            <div class="week-tags"><span class="week-tag">Week 4</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="turkey" data-weeks="1" data-diet="gf ef" data-search="turkey & sweet potato hash turkey gluten-free egg-free">
+            <a href="recipes/turkey-sweet-potato-hash.html">Turkey & Sweet Potato Hash</a>
+            <span class="rating rating-loved">Loved</span>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-turkey">Turkey</span> Prep: 20 min | Cook: 25 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-ef">EF</span></div>
+            <div class="week-tags"><span class="week-tag">Week 1</span></div>
+        </div>
+
+
+        <!-- PORK -->
+        <div class="recipe-card" data-protein="pork" data-weeks="3" data-diet="gf df ef sf" data-search="pan-roasted pork tenderloin with fresh chimichurri pork gluten-free dairy-free egg-free soy-free">
+            <a href="recipes/pork-chimichurri.html">Pan-Roasted Pork Tenderloin with Fresh Chimichurri</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-pork">Pork</span> Prep: 10 min | Cook: 15 min | Total: 25 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span></div>
+            <div class="week-tags"><span class="week-tag">Week 3</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="pork" data-weeks="4" data-diet="gf df ef sf lf" data-search="pork chops with oyster mushrooms pork gluten-free dairy-free egg-free soy-free low-fodmap">
+            <a href="recipes/pork-chops-mushrooms.html">Pork Chops with Oyster Mushrooms</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-pork">Pork</span> 
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span><span class="diet-tag diet-lf">Low-FODMAP</span></div>
+            <div class="week-tags"><span class="week-tag">Week 4</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="pork" data-weeks="2" data-diet="gf ef" data-search="pork tenderloin with pickled beets & goat cheese pork gluten-free egg-free">
+            <a href="recipes/pork-tenderloin-beets.html">Pork Tenderloin with Pickled Beets & Goat Cheese</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-pork">Pork</span> Prep: 10 min | Cook: 25 min | Total: 35 min
             </div>
             <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-ef">EF</span></div>
             <div class="week-tags"><span class="week-tag">Week 2</span></div>
         </div>
 
-        <div class="recipe-card" data-protein="seafood" data-weeks="4,6" data-diet="gf df ef sf lf" data-search="pan-seared salmon with carrots seafood gluten-free dairy-free egg-free soy-free low-fodmap">
-            <a href="recipes/pan-seared-salmon.html">Pan-Seared Salmon with Carrots</a>
+        <div class="recipe-card" data-protein="pork" data-weeks="5,6" data-diet="gf df ef sf lf" data-search="pork tenderloin with fresh chimichurri pork gluten-free dairy-free egg-free soy-free low-fodmap">
+            <a href="recipes/pork-tenderloin-chimichurri.html">Pork Tenderloin with Fresh Chimichurri</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-pork">Pork</span> Prep: 15 min | Cook: 30 min | Total: 45 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span><span class="diet-tag diet-lf">Low-FODMAP</span></div>
+            <div class="week-tags"><span class="week-tag">Week 5</span> <span class="week-tag">Week 6</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="pork" data-weeks="2" data-diet="gf df ef" data-search="thai coconut curry pork gluten-free dairy-free egg-free">
+            <a href="recipes/thai-coconut-curry.html">Thai Coconut Curry</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-pork">Pork</span> Prep: 10 min | Cook: 30 min | Total: 40 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span></div>
+            <div class="week-tags"><span class="week-tag">Week 2</span></div>
+        </div>
+
+
+        <!-- SEAFOOD -->
+        <div class="recipe-card" data-protein="seafood" data-weeks="2" data-diet="gf df ef sf lf" data-search="baked cod with lemon caper sauce & roasted broccoli seafood gluten-free dairy-free egg-free soy-free low-fodmap">
+            <a href="recipes/baked-cod.html">Baked Cod with Lemon Caper Sauce & Roasted Broccoli</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-seafood">Seafood</span> Prep: 10 min | Cook: 25 min | Total: 35 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span><span class="diet-tag diet-lf">Low-FODMAP</span></div>
+            <div class="week-tags"><span class="week-tag">Week 2</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="seafood" data-weeks="1" data-diet="gf ef" data-search="garlic butter shrimp (new & improved) seafood gluten-free egg-free">
+            <a href="recipes/garlic-butter-shrimp.html">Garlic Butter Shrimp (New & Improved)</a>
+            <span class="rating rating-skip">Skip</span>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-seafood">Seafood</span> Prep: 10 min | Cook: 10 min | Total: 20 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-ef">EF</span></div>
+            <div class="week-tags"><span class="week-tag">Week 1</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="seafood" data-weeks="5" data-diet="gf df ef sf lf" data-search="grilled lime salmon with avocado-mango salsa seafood gluten-free dairy-free egg-free soy-free low-fodmap">
+            <a href="recipes/grilled-lime-salmon.html">Grilled Lime Salmon with Avocado-Mango Salsa</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-seafood">Seafood</span> Prep: 45 min | Cook: 10 min | Total: 55 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span><span class="diet-tag diet-lf">Low-FODMAP</span></div>
+            <div class="week-tags"><span class="week-tag">Week 5</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="seafood" data-weeks="3" data-diet="gf df ef" data-search="honey garlic salmon & roasted asparagus seafood gluten-free dairy-free egg-free">
+            <a href="recipes/honey-garlic-salmon.html">Honey Garlic Salmon & Roasted Asparagus</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-seafood">Seafood</span> Prep: 10 min | Cook: 15 min | Total: 25 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span></div>
+            <div class="week-tags"><span class="week-tag">Week 3</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="seafood" data-weeks="4" data-diet="gf df ef sf lf" data-search="pan-seared salmon with bok choy seafood gluten-free dairy-free egg-free soy-free low-fodmap">
+            <a href="recipes/pan-seared-salmon.html">Pan-Seared Salmon with Bok Choy</a>
             <div class="recipe-meta">
                 <span class="protein-tag protein-seafood">Seafood</span> Prep: 10 min | Cook: 15 min | Total: 25 min
             </div>
             <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span><span class="diet-tag diet-lf">Low-FODMAP</span></div>
-            <div class="week-tags"><span class="week-tag">Week 4</span> <span class="week-tag">Week 6</span></div>
+            <div class="week-tags"><span class="week-tag">Week 4</span></div>
         </div>
+
+        <div class="recipe-card" data-protein="seafood" data-weeks="5" data-diet="gf df ef sf lf" data-search="sunday: pan-seared salmon & green beans seafood gluten-free dairy-free egg-free soy-free low-fodmap">
+            <a href="recipes/salmon-green-beans.html">Sunday: Pan-Seared Salmon & Green Beans</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-seafood">Seafood</span> 
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span><span class="diet-tag diet-lf">Low-FODMAP</span></div>
+            <div class="week-tags"><span class="week-tag">Week 5</span></div>
+        </div>
+
+        <div class="recipe-card" data-protein="seafood" data-weeks="4" data-diet="gf df ef sf lf" data-search="shrimp stir-fry with vegetables seafood gluten-free dairy-free egg-free soy-free low-fodmap">
+            <a href="recipes/shrimp-stir-fry.html">Shrimp Stir-Fry with Vegetables</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-seafood">Seafood</span> 
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span><span class="diet-tag diet-lf">Low-FODMAP</span></div>
+            <div class="week-tags"><span class="week-tag">Week 4</span></div>
+        </div>
+
 
         <!-- BREAKFAST -->
         <div class="recipe-card" data-protein="breakfast" data-weeks="6" data-diet="gf df ef sf lf" data-search="bacon, turkey & kale breakfast hash breakfast gluten-free dairy-free egg-free soy-free low-fodmap">
@@ -254,6 +483,28 @@
             <div class="week-tags"><span class="week-tag">Week 6</span></div>
         </div>
 
+        <div class="recipe-card" data-protein="breakfast" data-weeks="3,4,5" data-diet="gf df ef sf lf" data-search="yukon gold turkey & parsnip hash breakfast gluten-free dairy-free egg-free soy-free low-fodmap">
+            <a href="recipes/breakfast-hash.html">Yukon Gold Turkey & Parsnip Hash</a>
+            <span class="rating rating-loved">Loved</span>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-breakfast">Breakfast</span> 
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span><span class="diet-tag diet-lf">Low-FODMAP</span></div>
+            <div class="week-tags"><span class="week-tag">Week 3</span> <span class="week-tag">Week 4</span> <span class="week-tag">Week 5</span></div>
+        </div>
+
+
+        <!-- OTHER -->
+        <div class="recipe-card" data-protein="other" data-weeks="5" data-diet="gf df ef sf lf" data-search="salted dark chocolate tart other gluten-free dairy-free egg-free soy-free low-fodmap">
+            <a href="recipes/salted-dark-chocolate-tart.html">Salted Dark Chocolate Tart</a>
+            <div class="recipe-meta">
+                <span class="protein-tag protein-other">Other</span> Prep: 15 min | Cook: 12 min | Total: 27 min
+            </div>
+            <div class="diet-tags"><span class="diet-tag diet-gf">GF</span><span class="diet-tag diet-df">DF</span><span class="diet-tag diet-ef">EF</span><span class="diet-tag diet-sf">SF</span><span class="diet-tag diet-lf">Low-FODMAP</span></div>
+            <div class="week-tags"><span class="week-tag">Week 5</span></div>
+        </div>
+
+
     </div>
 
     <div class="no-results" id="noResults">
@@ -262,30 +513,37 @@
 
     <div class="weeks-section">
         <h2>Weekly Archives</h2>
+        <p>Browse past meal plans to see what was cooked each week.</p>
         <div class="weeks-grid">
             <div class="week-card">
                 <a href="weeks/week1.html">Week 1</a>
                 <div class="meta">February 16-22, 2026</div>
+                <div class="meta">4 recipes</div>
             </div>
             <div class="week-card">
                 <a href="weeks/week2.html">Week 2</a>
                 <div class="meta">February 23-27, 2026</div>
+                <div class="meta">5 recipes</div>
             </div>
             <div class="week-card">
                 <a href="weeks/week3.html">Week 3</a>
                 <div class="meta">March 1-7, 2026</div>
+                <div class="meta">7 recipes</div>
             </div>
             <div class="week-card">
                 <a href="weeks/week4.html">Week 4</a>
                 <div class="meta">March 9-15, 2026</div>
-            </div>
-            <div class="week-card">
-                <a href="weeks/week5.html">Week 5</a>
-                <div class="meta">March 16-22, 2026</div>
+                <div class="meta">6 recipes</div>
             </div>
             <div class="week-card current">
-                <a href="index.html">Week 6 (Current)</a>
+                <a href="index.html">Week 5 (Current)</a>
+                <div class="meta">March 16-22, 2026</div>
+                <div class="meta">9 recipes</div>
+            </div>
+            <div class="week-card">
+                <a href="weeks/week6.html">Week 6</a>
                 <div class="meta">March 23-29, 2026</div>
+                <div class="meta">6 recipes</div>
             </div>
         </div>
     </div>
