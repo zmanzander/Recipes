@@ -182,42 +182,7 @@
       }
     },
     "recipes": ["breakfast-hash", "herb-roasted-chicken", "salmon-green-beans", "ground-turkey-taco-bowls", "beef-fajita-bowls", "pork-tenderloin-chimichurri", "crispy-chicken-thighs", "salted-dark-chocolate-tart", "grilled-lime-salmon"],
-    "highlights": ["Salmon & Green Beans (Hanna solo)", "Roast Chicken lunch prep", "Beef Fajita Bowls", "Pork Tenderloin Chimichurri"],
-    "shopping": {
-      "produce": [
-        "Yukon Gold Potatoes (3 lbs)",
-        "Parsnips (1.5 lbs)",
-        "Carrots (1 small bag)",
-        "Asparagus (2 bunches)",
-        "Green Beans (1 bunch)",
-        "Yellow Bell Peppers (4 total)",
-        "Zucchini (1 whole)",
-        "Spaghetti Squash (1 small)",
-        "Green Onions (1 bunch - use tops only)",
-        "Fresh Parsley (2 bunches)",
-        "Fresh Cilantro (1 bunch)",
-        "Lemons (4 total)"
-      ],
-      "proteins": [
-        "Ground Turkey (93% lean) (3 lbs)",
-        "Chicken Breast (3 lbs)",
-        "Salmon Fillets (0.5 lb - Hanna Solo portion)",
-        "Ground Turkey (0.5 lb - for Hanna's Squash Boats)",
-        "Ground Beef (0.5 lb - for Hanna's Stir-fry)",
-        "Boneless Pork Tenderloin (1.5 lbs)",
-        "Chicken Thighs (Bone-in, skin-on) (1.5 lbs)"
-      ],
-      "dairy": [
-        "Salsa (Low-FODMAP / Fody brand) (1 jar)"
-      ],
-      "pantry": [
-        "Garlic-infused Olive Oil (Refill)",
-        "Jasmine Rice (Check stock)",
-        "Capers (1 small jar)",
-        "Chicken Stock (1 carton - Low-FODMAP/GF)",
-        "Coconut Aminos (Soy-free)"
-      ]
-    }
+    "highlights": ["Salmon & Green Beans (Hanna solo)", "Roast Chicken lunch prep", "Beef Fajita Bowls", "Pork Tenderloin Chimichurri"]
   },
   {
     "week": 6,
@@ -245,12 +210,12 @@
       "wednesday": {
         "breakfast": { "recipe": "bacon-kale-breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
         "lunch": { "label": "Leftovers" },
-        "dinner": { "recipe": "baked-cod", "tag": "fresh", "who": ["zander", "hanna"] }
+        "dinner": { "recipe": "baja-fajita-bowl", "tag": "fresh", "who": ["zander", "hanna"] }
       },
       "thursday": {
         "breakfast": { "recipe": "bacon-kale-breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
         "lunch": { "recipe": "chicken-asparagus-prep", "tag": "prep", "who": ["zander", "hanna"], "soloNote": "Sep. Prep" },
-        "dinner": { "recipe": "lemon-herb-boneless-thighs", "tag": "fresh", "who": ["zander", "hanna"] }
+        "dinner": { "recipe": "lemon-garlic-chicken-breast", "tag": "fresh", "who": ["zander", "hanna"] }
       },
       "friday": {
         "breakfast": { "recipe": "bacon-kale-breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
@@ -258,14 +223,15 @@
         "dinner": { "label": "Dinner Out" }
       },
       "saturday": {
-        "note": "Free Day"
+        "lunch": { "recipe": "beef-fajita-bowls", "tag": "fresh", "who": ["zander", "hanna"] },
+        "dinner": { "recipe": "pan-seared-salmon", "tag": "fresh", "who": ["zander", "hanna"] }
       },
       "sunday": {
         "lunch": { "label": "Leftovers" },
-        "dinner": { "recipe": "herb-roasted-chicken", "tag": "fresh", "who": ["zander", "hanna"] }
+        "dinner": { "recipe": "steak-potatoes", "tag": "fresh", "who": ["zander", "hanna"] }
       }
     },
-    "recipes": ["bacon-kale-breakfast-hash", "oven-roasted-spatchcock-chicken", "creamy-balsamic-mushroom-pasta", "pork-tenderloin-chimichurri", "baked-cod", "chicken-asparagus-prep", "lemon-herb-boneless-thighs", "beef-fajita-bowls", "pan-seared-salmon"],
-    "highlights": ["Bacon & Turkey Hash", "Spatchcock Herb Chicken", "Balsamic Beef Pasta", "Lemon Herb Thighs"]
+    "recipes": ["bacon-kale-breakfast-hash", "oven-roasted-spatchcock-chicken", "creamy-balsamic-mushroom-pasta", "pork-tenderloin-chimichurri", "baja-fajita-bowl", "chicken-asparagus-prep", "lemon-garlic-chicken-breast", "beef-fajita-bowls", "pan-seared-salmon", "steak-potatoes"],
+    "highlights": ["Bacon & Turkey Hash", "Spatchcock Herb Chicken", "Balsamic Beef Pasta", "Baja Fajita Bowl"]
   }
 ]
