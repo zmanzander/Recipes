@@ -406,10 +406,6 @@ ${cards}
 ${weekCards}        </div>
     </div>
 
-    <p style="margin-top: 40px; color: #7f8c8d; font-size: 0.9em; text-align: center;">
-        <a href="index.html">&larr; Back to Current Week</a>
-    </p>
-
     <script>
         const searchInput = document.getElementById('searchInput');
         const proteinButtons = document.querySelectorAll('.filter-btn:not(.diet-filter)');
@@ -679,11 +675,7 @@ ${buildWeekScheduleTable(week, prefix)}
 ${buildWeekRecipeList(week, prefix)}
 ${week.shopping ? buildShoppingList(week.shopping) : ''}
 
-    <p style="margin-top: 40px; color: #7f8c8d; font-size: 0.9em; text-align: center;">
-        ${prevWeek ? `<a href="${isIndex ? 'weeks/' : ''}week${prevWeek.week}.html">&larr; Week ${prevWeek.week}</a> &middot; ` : ''}
-        <a href="${prefix}catalog.html">All Recipes</a>
-        ${nextWeek ? ` &middot; <a href="${nextWeek.week === currentWeek.week ? prefix + 'index.html' : (isIndex ? 'weeks/' : '') + 'week' + nextWeek.week + '.html'}">Week ${nextWeek.week} &rarr;</a>` : ''}
-    </p>
+
 </body>
 </html>`;
 }
