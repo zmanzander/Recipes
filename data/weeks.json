@@ -226,7 +226,7 @@
     },
     "schedule": {
       "sunday": {
-        "dinner": { "recipe": "oven-roasted-chicken-peaches", "tag": "fresh", "who": ["zander", "hanna"] }
+        "dinner": { "recipe": "oven-roasted-spatchcock-chicken", "tag": "fresh", "who": ["zander", "hanna"] }
       },
       "monday": {
         "breakfast": { "recipe": "bacon-kale-breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
@@ -262,7 +262,7 @@
         "dinner": { "recipe": "herb-roasted-chicken", "tag": "fresh", "who": ["zander", "hanna"] }
       }
     },
-    "recipes": ["bacon-kale-breakfast-hash", "oven-roasted-chicken-peaches", "beef-stir-fry", "pork-tenderloin-chimichurri", "baked-cod", "chicken-asparagus-prep", "lemon-herb-boneless-thighs", "beef-fajita-bowls", "pan-seared-salmon"],
-    "highlights": ["Bacon & Turkey Hash", "Peach Roast Chicken", "Baked Cod with Chimichurri", "Lemon Herb Thighs"]
+    "recipes": ["bacon-kale-breakfast-hash", "oven-roasted-spatchcock-chicken", "beef-stir-fry", "pork-tenderloin-chimichurri", "baked-cod", "chicken-asparagus-prep", "lemon-herb-boneless-thighs", "beef-fajita-bowls", "pan-seared-salmon"],
+    "highlights": ["Bacon & Turkey Hash", "Spatchcock Herb Chicken", "Baked Cod with Chimichurri", "Lemon Herb Thighs"]
   }
 ]
