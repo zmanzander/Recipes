@@ -1,0 +1,38 @@
+## 🥬 Produce
+- [ ] Yukon Gold Potatoes (2 lbs)
+- [ ] Oyster Mushrooms (4x 8oz packs = 28 oz total)
+- [ ] Kale (2 bunches = 3 cups chopped)
+- [ ] Spinach (1 bag, 5-6 oz)
+- [ ] Green Beans (3 lbs total: 2 lbs for Chicken + 1 lb for Lemon-Garlic)
+- [ ] Carrots (3 lbs total: 1 cup shredded for Hash + 2 lbs whole for Chicken)
+- [ ] Zucchini (2 lbs)
+- [ ] Yellow Bell Peppers (8 total: 2 lbs for Pork + 3 for Baja Bowl)
+- [ ] Green Onions or Chives (1/4 cup tops)
+- [ ] Fresh Parsley (2 bunches: 1 cup for Pork + garnish for Hash/Chicken)
+- [ ] Fresh Cilantro (2 bunches: 1/2 cup for Pork + 1 bunch for Baja)
+- [ ] Fresh Rosemary (1 pack for Chicken)
+- [ ] Fresh Thyme (1 pack for Chicken)
+- [ ] Lemons (3 total: 2 for Chicken + 1 for Pork/Lemon-Garlic)
+- [ ] Limes (2 for Baja Bowl)
+
+## 🥩 Proteins
+- [ ] Ground Turkey (93% lean) (3 lbs)
+- [ ] Bacon (nitrate-free) (1 lb)
+- [ ] Whole Chicken (1 chicken, 4-5 lbs, spatchcock)
+- [ ] Ground Beef (90/10) (3 lbs)
+- [ ] Boneless Pork Tenderloin (3 lbs)
+- [ ] Flank Steak (1.5 lbs)
+- [ ] Chicken Breast (boneless, skinless) (1.5 lbs)
+
+## 🌾 Pantry
+- [ ] Coconut Milk (Full-fat, 1 can - 1/2 cup for Pasta)
+- [ ] Balsamic Vinegar (1 bottle - 1/2 cup for Pasta)
+- [ ] Gluten-Free/Cassava Pasta (12 oz)
+- [ ] Jasmine Rice (1.5 cups dry for Baja Bowl)
+- [ ] Garlic-infused Olive Oil (1-2 bottles)
+- [ ] Gluten-Free & Soy-Free Tamari (for Lemon-Garlic + Baja Bowl)
+- [ ] Tapioca Starch (for Pasta slurry)
+- [ ] Red Pepper Flakes (for Pork)
+- [ ] Cumin (for Baja Bowl)
+- [ ] Dried Oregano (for Lemon-Garlic + Baja Bowl)
+- [ ] Sea Salt & Black Pepper
