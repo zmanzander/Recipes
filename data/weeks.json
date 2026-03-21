@@ -226,7 +226,7 @@
     },
     "schedule": {
       "sunday": {
-        "dinner": { "recipe": "herb-roasted-chicken", "tag": "fresh", "who": ["zander", "hanna"] }
+        "dinner": { "recipe": "oven-roasted-chicken-peaches", "tag": "fresh", "who": ["zander", "hanna"] }
       },
       "monday": {
         "breakfast": { "recipe": "breakfast-hash", "tag": "prep", "who": ["zander", "hanna"] },
